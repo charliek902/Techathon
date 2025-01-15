@@ -11,6 +11,9 @@ public class QuizHandler {
     private HashMap<String, String[]> Questions_Answers_Map;
     private HashMap<String, Integer> Questions_Correct_Answers_Map;
 
+    // need the navbar to go back
+    // when nav bar is clicked,
+
     public QuizHandler(String currentQuiz){
         this.currentQuiz = currentQuiz;
         this.user_page = 1;
