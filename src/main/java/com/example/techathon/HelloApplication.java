@@ -24,9 +24,9 @@ public class HelloApplication extends Application {
         sceneManager.addScene(calculatorScene, "calculator");
         sceneManager.addScene(learnScene, "learn");
         sceneManager.addScene(quizScene, "quiz");
+
         sceneManager.setScene(welcomeScene);
-        sceneManager.applyTitle("Welcome!");
-        sceneManager.applyStage(welcomeScene);
+        sceneManager.applyStage(welcomeScene, "Welcome!");
     }
 
     public static void main(String[] args) {

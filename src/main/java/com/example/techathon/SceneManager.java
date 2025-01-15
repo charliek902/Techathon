@@ -25,13 +25,11 @@ public class SceneManager {
         this.currentScene = scene ;
     }
 
-    public void applyStage(Scene scene){
+    public void applyStage(Scene scene, String title){
+        this.stage.setTitle(title);
         this.stage.setScene(scene);
         this.stage.show();
     }
 
-    public void applyTitle(String title){
-        this.stage.setTitle(title);
-    }
 
 }
