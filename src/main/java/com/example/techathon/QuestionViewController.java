@@ -171,20 +171,27 @@ public class QuestionViewController {
     }
 
     public void handlePrev(){
+        this.user_page -= 1;
+        if(this.user_page < 1){
+            // route to quiz menu page
+        }
+        else{
+            String prevPage = this.getNextPage(this.currentPage, this.currentQuiz);
+            // populate question template with next page
+        }
 
     }
 
     public void handleNext(){
         this.user_page += 1;
         if(this.user_page > 10){
-            // route to answers
+            // route to answers --> populate answer template with results
         }
         else{
             String nextPage = this.getNextPage(this.currentPage, this.currentQuiz);
+            // populate question template with next page
 
         }
-        // get next page info and route to it
-        // route to the next page
     }
 
     public String getNextPage(String currentPage, String QuizType){
@@ -218,17 +225,41 @@ public class QuestionViewController {
                 return "";
         }
     }
-
+/*
     public String getPrevPage(String currentPage, String QuizType){
+        Boolean foundCurrentPage = false;
+        String prevPage = "";
+        String currentPage = "";
+        switch(QuizType){
+            case "personality":
+                for (String key : Questions_Options_Personality_Map.keySet()) {
+                    if(foundCurrentPage && !foundNextPage){
+                        foundCurrentPage = true;
+                        nextPage = key;
+                    }
+                    else if(key == currentPage){
+                        foundCurrentPage = true;
+                    }
+                }
+                return nextPage;
+            case "finance":
+                for (String key : Questions_Options_Finance_Map.keySet()) {
+                    if(foundCurrentPage && !foundNextPage){
+                        foundNextPage = true;
+                        nextPage = key;
+                    }
+                    else if(key == currentPage){
+                        foundCurrentPage = true;
+                    }
+                }
+                return nextPage;
+            default:
+                return "";
+        }
         return "";
 
     }
-
-
-
-
-
-
+    */
 
     public void handleSelectedAnswer(){
 
