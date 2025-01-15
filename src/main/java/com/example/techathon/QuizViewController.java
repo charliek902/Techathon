@@ -28,5 +28,17 @@ public class QuizViewController {
     protected void onCalculatorButtonClick() {
         this.navController.onCalculatorButtonClick();
     }
+    @FXML
+    protected void onFinanceQuiz() {
+        // finance quiz
+    }
+    @FXML
+    protected void onPersonalityQuiz() {
+        // finance quiz
+    }
+
+
+
+
 
 }

@@ -6,9 +6,44 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.techathon.QuizViewController"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.techathon.QuizViewController">
+    <center>
+        <Pane fx:id="body" style="-fx-background-color: rgb(140,193,193);">
+            <Label text="Quiz Menu" textFill="#393535">
+                <font>
+                    <Font name="Bodoni MT" size="20.0" />
+                </font>
+            </Label>
+            <children>
+                <VBox alignment="CENTER" fillWidth="false">
+                    <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: #4545b3; -fx-alignment: centre;" text="Finance Quiz" textFill="WHITE" onAction="#onFinanceQuiz" />
+                        <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: #4545b3; -fx-alignment: centre;" text="Personality Quiz" textFill="WHITE" onAction="#onPersonalityQuiz" />
+                    </children>
+                    <padding>
+                        <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
+                    </padding>
+                </VBox>
+            </children>
+        </Pane>
+    </center>
+        <top>
+        <Pane fx:id="header" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER_LEFT" spacing="15.0">
+                    <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: #4545b3; -fx-alignment: centre;" text="Home" textFill="WHITE" onAction="#onHelloButtonClick" />
+                        <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: #4545b3; -fx-alignment: centre;" text="Learn" textFill="WHITE" onAction="#onLearnButtonClick" />
+                        <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: #4545b3; -fx-alignment: centre;" text="Quiz" textFill="WHITE" onAction="#onQuizButtonClick" />
+                        <Button mnemonicParsing="false" style="-fx-background-color: #4545b3; -fx-alignment: centre;" text="Calculators" textFill="WHITE" onAction="#onCalculatorButtonClick" />
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </Pane>
+        </top>
+</BorderPane>
