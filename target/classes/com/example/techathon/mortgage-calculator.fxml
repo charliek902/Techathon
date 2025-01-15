@@ -1,16 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.techathon.CalculatorController">
-    <VBox>
-        <Text text="Mortgage"/>
-    </VBox>
-</AnchorPane>
+
+
+<VBox stylesheets="@app.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.techathon.CalculatorController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Basic Mortgage Claculator">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <Region prefHeight="44.0" prefWidth="200.0" />
+      <VBox style="-fx-background-color: yellow;" stylesheets="@app.css">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Debt" />
+            <HBox>
+               <children>
+                  <TextField />
+               </children>
+            </HBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Term" />
+            <HBox>
+               <children>
+                  <TextField />
+               </children>
+            </HBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Interest" />
+            <HBox>
+               <children>
+                  <TextField />
+               </children>
+            </HBox>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Mortgage taken" />
+            <HBox>
+               <children>
+                  <TextField />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Pane style="-fx-background-color: green;">
+         <children>
+            <HBox>
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Your Result" />
+                  <Region prefHeight="17.0" prefWidth="11.0" />
+               </children>
+            </HBox>
+            <HBox layoutY="17.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Payment per month" />
+                  <Region prefHeight="17.0" prefWidth="11.0" />
+                  <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="#" />
+               </children>
+            </HBox>
+            <HBox layoutY="34.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Total Paid" />
+                  <Region prefHeight="17.0" prefWidth="11.0" />
+                  <Text layoutX="10.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="#" />
+               </children>
+            </HBox>
+         </children>
+      </Pane>
+   </children>
+</VBox>
