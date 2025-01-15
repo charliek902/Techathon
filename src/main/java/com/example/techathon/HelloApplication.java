@@ -24,8 +24,19 @@ public class HelloApplication extends Application {
         sceneManager.addScene(calculatorScene, "calculator");
         sceneManager.addScene(learnScene, "learn");
         sceneManager.addScene(quizScene, "quiz");
-
         sceneManager.setScene(welcomeScene);
+
+        // add scene manager to controllers
+
+        HelloController welcomeController = fxmlLoader.getController();
+        CalculatorController calculatorController = fxmlLoader2.getController();
+        LearnViewController learnViewController = fxmlLoader3.getController();
+        QuizViewController quizViewController = fxmlLoader4.getController();
+        welcomeController.setSceneManager(sceneManager);
+        calculatorController.setSceneManager(sceneManager);
+        learnViewController.setSceneManager(sceneManager);
+        quizViewController.setSceneManager(sceneManager);
+
         sceneManager.applyStage(welcomeScene, "Welcome!");
     }
 
