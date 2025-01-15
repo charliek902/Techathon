@@ -1,0 +1,25 @@
+
+
+/*----- Hello View Styling ----*/
+.body-style{
+    -fx-background-color: rgb(140,193,193);
+}
+
+.menu-btn{
+    -fx-background-color: transparent;
+    -fx-text-fill: black;
+}
+
+
+.footer-style{
+    -fx-background-color: #6e8d63;
+}
+
+.home-heading{
+    -fx-text-fill:"#393535";
+
+}
+
+.home-heading{
+    -fx-text-fill: "#393535";
+}
