@@ -13,7 +13,7 @@ public class HelloApplication extends Application {
         SceneManager sceneManager = new SceneManager(stage);
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene welcomeScene = new Scene(fxmlLoader.load(), 600, 600);
-        FXMLLoader fxmlLoader2 = new FXMLLoader(HelloApplication.class.getResource("Calculator-view.fxml"));
+        FXMLLoader fxmlLoader2 = new FXMLLoader(HelloApplication.class.getResource("chooseCalculator-view.fxml"));
         Scene calculatorScene = new Scene(fxmlLoader2.load(), 600, 600);
         FXMLLoader fxmlLoader3 = new FXMLLoader(HelloApplication.class.getResource("Learn-view.fxml"));
         Scene learnScene = new Scene(fxmlLoader3.load(), 600, 600);
