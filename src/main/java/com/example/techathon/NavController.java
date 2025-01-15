@@ -27,7 +27,7 @@ public class NavController {
 
     protected void onCalculatorButtonClick() {
         Scene calculatorScene = this.sceneManager.getScene("calculator");
-        this.sceneManager.applyStage(calculatorScene, "Calculator");
+        this.sceneManager.applyStage(calculatorScene, "CalculatorController");
     }
 
 

@@ -1,47 +1,45 @@
 package com.example.techathon;
 
 import javafx.fxml.FXML;
-import javafx.scene.Scene;
+import javafx.scene.control.TextField;
 
 public class CalculatorController {
-    private SceneManager sceneManager;
+    @FXML
+    private TextField amountField;
+    @FXML
+    private TextField timeField;
+
     private NavController navController;
 
+    private SceneManager sceneManager;
+
+    double ISAInterest = 2;
+
+    public void setNavContoller(NavController navController) {
+        this.navController = navController;
+    }
     public void setSceneManager(SceneManager sceneManager){
         this.sceneManager = sceneManager;
     }
-    public void setNavContoller(NavController controller){
-        this.navController = controller;
-    }
+
     @FXML
-    protected void onHelloButtonClick() {
-        this.navController.onHomeButtonClick();
-    }
-    @FXML
-    protected void onLearnButtonClick() {
-        this.navController.onLearnButtonClick();
-    }
-    @FXML
-    protected void onQuizButtonClick() {
-        this.navController.onQuizButtonClick();
-    }
-    @FXML
-    protected void onCalculatorButtonClick() {
-        this.navController.onCalculatorButtonClick();
+    private void handleISACalculate() {
+        double amount = Double.parseDouble(amountField.getText());
+        short time = Short.parseShort(timeField.getText());
+        double result = amount * ((ISAInterest / 100) + 1) * time;
     }
 
     @FXML
-    protected void onISAButtonClick() {
-//        sceneManager.getScene()
-//        sceneManager.applyStage();
-    }
-    @FXML
-    protected void onPensionsButtonClick() {
-
-    }
-    @FXML
-    protected void onMortgageButtonClick(){
-        System.out.println("Mortgage");
+    private void handlePensionCalculate() {
+        double amount = Double.parseDouble(amountField.getText());
+        short time = Short.parseShort(timeField.getText());
     }
 
+    @FXML
+    private void handleMortgageCalculate() {
+        double amount = Double.parseDouble(amountField.getText());
+        short time = Short.parseShort(timeField.getText());
+        double result = time*amount;
+    }
 }
+
