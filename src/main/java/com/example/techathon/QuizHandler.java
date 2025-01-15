@@ -8,13 +8,15 @@ public class QuizHandler {
     private int user_page;
     private int correct;
 
-    private HashMap<String, Integer> Questions_Answers_Map;
+    private HashMap<String, String[]> Questions_Answers_Map;
+    private HashMap<String, Integer> Questions_Correct_Answers_Map;
 
     public QuizHandler(String currentQuiz){
         this.currentQuiz = currentQuiz;
         this.user_page = 1;
         this.correct = 0;
         this.Questions_Answers_Map = new HashMap<>();
+        this.Questions_Correct_Answers_Map = new HashMap<>();
     }
 
     public void handlePrev(){
