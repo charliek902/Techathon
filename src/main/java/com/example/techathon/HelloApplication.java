@@ -43,10 +43,6 @@ public class HelloApplication extends Application {
         learnViewController.setNavContoller(navController);
         quizViewController.setNavContoller(navController);
 
-
-
-
-
         sceneManager.applyStage(welcomeScene, "Welcome!");
     }
 
