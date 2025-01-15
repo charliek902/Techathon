@@ -36,6 +36,16 @@ public class HelloApplication extends Application {
         calculatorController.setSceneManager(sceneManager);
         learnViewController.setSceneManager(sceneManager);
         quizViewController.setSceneManager(sceneManager);
+        NavController navController = new NavController(sceneManager);
+
+        welcomeController.setNavContoller(navController);
+        calculatorController.setNavContoller(navController);
+        learnViewController.setNavContoller(navController);
+        quizViewController.setNavContoller(navController);
+
+
+
+
 
         sceneManager.applyStage(welcomeScene, "Welcome!");
     }

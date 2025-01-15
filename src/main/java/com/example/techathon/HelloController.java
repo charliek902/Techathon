@@ -1,36 +1,51 @@
 package com.example.techathon;
 
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
+
+
+/*
+
+        sceneManager.addScene(welcomeScene, "welcome");
+        sceneManager.addScene(calculatorScene, "calculator");
+        sceneManager.addScene(learnScene, "learn");
+        sceneManager.addScene(quizScene, "quiz");
+
+ */
+
+
+
 
 public class HelloController {
     private SceneManager sceneManager;
+    private NavController navController;
 
     public void setSceneManager(SceneManager sceneManager){
         this.sceneManager = sceneManager;
     }
-
-
-
+    public void setNavContoller(NavController controller){
+        this.navController = controller;
+    }
 
     @FXML
     private Label welcomeText;
 
     @FXML
     protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+        this.navController.onHomeButtonClick();
     }
     @FXML
     protected void onLearnButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+        this.navController.onLearnButtonClick();
     }
     @FXML
     protected void onQuizButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+        this.navController.onQuizButtonClick();
     }
     @FXML
     protected void onCalculatorButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
+        this.navController.onCalculatorButtonClick();
     }
 
 }
