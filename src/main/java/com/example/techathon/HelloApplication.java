@@ -25,11 +25,15 @@ public class HelloApplication extends Application {
         Scene learnScene = new Scene(fxmlLoader3.load(), 600, 600);
         FXMLLoader fxmlLoader4 = new FXMLLoader(HelloApplication.class.getResource("Quiz-view.fxml"));
         Scene quizScene = new Scene(fxmlLoader4.load(), 600, 600);
+        FXMLLoader fxmlLoader5 = new FXMLLoader(HelloApplication.class.getResource("calculator.fxml"));
+        Scene calculate = new Scene(fxmlLoader5.load(), 600, 600);
 
         sceneManager.addScene(welcomeScene, "welcome");
         sceneManager.addScene(calculatorScene, "calculator");
         sceneManager.addScene(learnScene, "learn");
         sceneManager.addScene(quizScene, "quiz");
+        sceneManager.addScene(calculate, "calculate");
+
         sceneManager.setScene(welcomeScene);
 
         // add scene manager to controllers
@@ -38,16 +42,20 @@ public class HelloApplication extends Application {
         CalculatorController calculatorController = fxmlLoader2.getController();
         LearnViewController learnViewController = fxmlLoader3.getController();
         QuizViewController quizViewController = fxmlLoader4.getController();
+        CalculatorController calculateViewController = fxmlLoader5.getController();
+        calculateViewController.setSceneManager(sceneManager);
         welcomeController.setSceneManager(sceneManager);
         calculatorController.setSceneManager(sceneManager);
         learnViewController.setSceneManager(sceneManager);
         quizViewController.setSceneManager(sceneManager);
+
         NavController navController = new NavController(sceneManager);
 
         welcomeController.setNavContoller(navController);
         calculatorController.setNavContoller(navController);
         learnViewController.setNavContoller(navController);
         quizViewController.setNavContoller(navController);
+        calculateViewController.setNavContoller(navController);
 
         sceneManager.applyStage(welcomeScene, "Welcome!");
     }

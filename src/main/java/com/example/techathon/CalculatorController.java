@@ -1,6 +1,7 @@
 package com.example.techathon;
 
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 
 public class CalculatorController {
     private SceneManager sceneManager;
@@ -31,11 +32,12 @@ public class CalculatorController {
 
     @FXML
     protected void onISAButtonClick() {
-        System.out.println("I am ISA");
+//        sceneManager.getScene()
+//        sceneManager.applyStage();
     }
     @FXML
     protected void onPensionsButtonClick() {
-        System.out.println("Pensions");
+
     }
     @FXML
     protected void onMortgageButtonClick(){
