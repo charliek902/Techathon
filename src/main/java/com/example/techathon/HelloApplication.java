@@ -14,8 +14,13 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene welcomeScene = new Scene(fxmlLoader.load(), 600, 600);
         welcomeScene.getStylesheets().add(HelloApplication.class.getResource("/com/example/techathon/app.css").toExternalForm());
+
         FXMLLoader fxmlLoader2 = new FXMLLoader(HelloApplication.class.getResource("chooseCalculator-view.fxml"));
+
+
         Scene calculatorScene = new Scene(fxmlLoader2.load(), 600, 600);
+        calculatorScene.getStylesheets().add(HelloApplication.class.getResource("/com/example/techathon/app.css").toExternalForm());
+
         FXMLLoader fxmlLoader3 = new FXMLLoader(HelloApplication.class.getResource("Learn-view.fxml"));
         Scene learnScene = new Scene(fxmlLoader3.load(), 600, 600);
         FXMLLoader fxmlLoader4 = new FXMLLoader(HelloApplication.class.getResource("Quiz-view.fxml"));

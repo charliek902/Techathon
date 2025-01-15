@@ -10,16 +10,48 @@
     -fx-text-fill: black;
 }
 
-
 .footer-style{
     -fx-background-color: #6e8d63;
 }
 
 .home-heading{
-    -fx-text-fill:"#393535";
-
-}
-
-.home-heading{
     -fx-text-fill: "#393535";
 }
+
+/*-------- chooseCalculator-view Styling ---------*/
+
+.choose-calculator-heading{
+    -fx-margin: 10px;
+    -fx-text-alignment: center;
+}
+
+.choose-ISAcalculator-btn:hover{
+    -fx-background-color: #cbeef3;
+}
+
+.choose-Pensioncalculator-btn:hover{
+    -fx-background-color: #cbeef3;
+}
+
+.choose-Mortgagecalculator-btn:hover{
+    -fx-background-color: #cbeef3;
+    -fx-border-color: black;
+
+}
+
+.choose-ISAcalculator-btn{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+}
+
+.choose-Pensioncalculator-btn{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+}
+
+.choose-Mortgagecalculator-btn{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+}
+
+
