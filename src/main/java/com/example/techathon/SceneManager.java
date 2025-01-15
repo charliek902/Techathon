@@ -17,4 +17,8 @@ public class SceneManager {
         this.sceneHashMap.put(route, scene);
     }
 
+    public Scene getScene(String route){
+        return this.sceneHashMap.get(route);
+    }
+
 }
