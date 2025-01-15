@@ -1,16 +1,56 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.techathon.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.techathon.HelloController">
+    <center>
+        <Pane fx:id="body" style="-fx-background-color: rgb(140,193,193);">
+            <children>
+                <VBox alignment="CENTER" fillWidth="false">
+                    <children>
+                        <Label text="World of Finance" textFill="#393535">
+                            <font>
+                                <Font name="Bodoni MT" size="34.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
+                    </padding>
+                </VBox>
+            </children>
+        </Pane>
+    </center>
+    <top>
+        <Pane fx:id="header" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER_LEFT" spacing="15.0">
+                    <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: #4545b3; -fx-alignment: centre;" text="Home" textFill="WHITE" />
+                        <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: #4545b3; -fx-alignment: centre;" text="Learn" textFill="WHITE" />
+                        <Button alignment="CENTER" mnemonicParsing="false" style="-fx-background-color: #4545b3; -fx-alignment: centre;" text="Quiz" textFill="WHITE" />
+                        <Button mnemonicParsing="false" style="-fx-background-color: #4545b3; -fx-alignment: centre;" text="Calculators" textFill="WHITE" />
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </Pane>
+    </top>
+    <bottom>
+        <Pane fx:id="footer" style="-fx-background-color: #6e8d63;" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="20.0" layoutY="10.0" text="Copyright @ WOF 2025" textFill="WHITE" wrapText="true" />
+                <Label layoutX="198.0" layoutY="10.0" text="WOF is a trademark under the World of Finance group." textFill="WHITE" wrapText="true" />
+            </children>
+        </Pane>
+    </bottom>
+</BorderPane>

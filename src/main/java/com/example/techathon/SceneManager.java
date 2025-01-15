@@ -7,6 +7,7 @@ import java.util.HashMap;
 public class SceneManager {
     private Stage stage;
     private HashMap<String, Scene> sceneHashMap;
+    private Scene currentScene;
 
     public SceneManager(Stage stage){
         this.stage = stage;
@@ -19,6 +20,18 @@ public class SceneManager {
 
     public Scene getScene(String route){
         return this.sceneHashMap.get(route);
+    }
+    public void setScene(Scene scene){
+        this.currentScene = scene ;
+    }
+
+    public void applyStage(Scene scene){
+        this.stage.setScene(scene);
+        this.stage.show();
+    }
+
+    public void applyTitle(String title){
+        this.stage.setTitle(title);
     }
 
 }

@@ -10,14 +10,23 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 600, 600);
         SceneManager sceneManager = new SceneManager(stage);
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
+        Scene welcomeScene = new Scene(fxmlLoader.load(), 600, 600);
+        FXMLLoader fxmlLoader2 = new FXMLLoader(HelloApplication.class.getResource("Calculator-view.fxml"));
+        Scene calculatorScene = new Scene(fxmlLoader2.load(), 600, 600);
+        FXMLLoader fxmlLoader3 = new FXMLLoader(HelloApplication.class.getResource("Learn-view.fxml"));
+        Scene learnScene = new Scene(fxmlLoader3.load(), 600, 600);
+        FXMLLoader fxmlLoader4 = new FXMLLoader(HelloApplication.class.getResource("Quiz-view.fxml"));
+        Scene quizScene = new Scene(fxmlLoader4.load(), 600, 600);
 
-
-        stage.setTitle("Hello!");
-        stage.setScene(scene);
-        stage.show();
+        sceneManager.addScene(welcomeScene, "welcome");
+        sceneManager.addScene(calculatorScene, "calculator");
+        sceneManager.addScene(learnScene, "learn");
+        sceneManager.addScene(quizScene, "quiz");
+        sceneManager.setScene(welcomeScene);
+        sceneManager.applyTitle("Welcome!");
+        sceneManager.applyStage(welcomeScene);
     }
 
     public static void main(String[] args) {
