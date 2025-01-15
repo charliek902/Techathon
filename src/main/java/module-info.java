@@ -7,4 +7,6 @@ module com.example.techathon {
 
     opens com.example.techathon to javafx.fxml;
     exports com.example.techathon;
+    exports com.example.techathon.Calculators;
+    opens com.example.techathon.Calculators to javafx.fxml;
 }

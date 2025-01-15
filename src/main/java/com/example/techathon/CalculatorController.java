@@ -29,4 +29,17 @@ public class CalculatorController {
         this.navController.onCalculatorButtonClick();
     }
 
+    @FXML
+    protected void onISAButtonClick() {
+        System.out.println("I am ISA");
+    }
+    @FXML
+    protected void onPensionsButtonClick() {
+        System.out.println("Pensions");
+    }
+    @FXML
+    protected void onMortgageButtonClick(){
+        System.out.println("Mortgage");
+    }
+
 }

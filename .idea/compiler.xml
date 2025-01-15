@@ -9,8 +9,5 @@
         <module name="Techathon" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="Techathon" target="17" />
-    </bytecodeTargetLevel>
   </component>
 </project>

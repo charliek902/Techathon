@@ -49,7 +49,7 @@
         <Pane fx:id="footer" style="-fx-background-color: #6e8d63;" BorderPane.alignment="CENTER">
             <children>
                 <Label layoutX="20.0" layoutY="10.0" text="Copyright @ WOF 2025" textFill="WHITE" wrapText="true" />
-                <Label layoutX="198.0" layoutY="10.0" text="WOF is a trademark under the World of Finance group." textFill="WHITE" wrapText="true" />
+                <Label layoutX="198.0" layoutY="10.0" text="WOF is a trademark under the FinanceED company." textFill="WHITE" wrapText="true" />
             </children>
         </Pane>
     </bottom>
