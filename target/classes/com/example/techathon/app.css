@@ -9,14 +9,18 @@
     -fx-background-color: transparent;
     -fx-text-fill: black;
     -fx-cursor: hand;
+    -fx-border-color: black;
+    -fx-border-radius: 10px;
+    -fx-background-radius: 10px;
 }
 
 .menu-btn:hover{
     -fx-background-color: #cbeef3;
+    -fx-font-size: larger ;
 }
 .nav-pane{
     -fx-border-color: #000000;
-    -fx-border-insets: 0,0,100,0;
+
 }
 
 .footer-style{
