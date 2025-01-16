@@ -87,4 +87,20 @@
 }
 
 
+/*---- Article1 Styling---*/
+
+.article-title{
+    -fx-font-weight: bold;
+    -fx-font-size: 36px;
+}
+
+.article-subheading{
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+    -fx-padding: 10;
+}
+
+.article-content{
+    -fx-font-size: 18px;
+}
 
