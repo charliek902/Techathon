@@ -87,6 +87,7 @@ public class HelloApplication extends Application {
 
         AnswerViewController answerViewController = fxmlLoader8.getController();
         QuestionViewController question = fxmlLoader9.getController();
+        NotesViewController notesViewController = fxmlLoader10.getController();
 
 
 
@@ -112,16 +113,9 @@ public class HelloApplication extends Application {
         answerViewController.setNavContoller(navController);
         question.setNavContoller(navController);
         budgetCalcController.setNavContoller(navController);
+        notesViewController.setNavContoller(navController);
 
 
-        /*
-
-         Scene calculatorScene = this.sceneManager.getScene("Notes");
-        this.sceneManager.applyStage(calculatorScene, "Notes");
-
-
-
-         */
 
 
         sceneManager.applyStage(welcomeScene, "Welcome!");
