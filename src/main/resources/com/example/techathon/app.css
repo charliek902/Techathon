@@ -10,6 +10,10 @@
     -fx-text-fill: black;
 }
 
+.menu-btn:hover{
+    -fx-background-color: #cbeef3;
+}
+
 .footer-style{
     -fx-background-color: #6e8d63;
 }

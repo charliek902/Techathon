@@ -23,6 +23,23 @@ public class CalculatorController {
     }
 
     @FXML
+    protected void onHelloButtonClick() {
+        this.navController.onHomeButtonClick();
+    }
+    @FXML
+    protected void onLearnButtonClick() {
+        this.navController.onLearnButtonClick();
+    }
+    @FXML
+    protected void onQuizButtonClick() {
+        this.navController.onQuizButtonClick();
+    }
+    @FXML
+    protected void onCalculatorButtonClick() {
+        this.navController.onCalculatorButtonClick();
+    }
+
+    @FXML
     private void handleISACalculate() {
         double amount = Double.parseDouble(amountField.getText());
         short time = Short.parseShort(timeField.getText());
