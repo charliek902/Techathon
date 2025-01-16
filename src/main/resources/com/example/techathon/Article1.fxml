@@ -15,7 +15,7 @@
                     <!-- Title of Article-->
                     <children>
 
-                        <Label styleClass="article-title" text="Loans for young people">
+                        <Label styleClass="article-title" text="Loans for young people" accessibleRole="heading" accessibleRoleDescription="Main Title" >
                             <font>
                                 <Font name="Bodoni MT" size="34.0" />
                             </font>
@@ -23,7 +23,7 @@
 
 
                         <!--Article Image-->
-                        <ImageView fitWidth="250.0" fitHeight="250.0">
+                        <ImageView fitWidth="250.0" fitHeight="250.0" accessibleText="Image of a loan for young people.">
                             <image>
                                 <Image  url="https://www.moneysavingexpert.com/content/dam/loan-new-car.jpg.rendition.992.992.jpg"/>
                             </image>
@@ -38,20 +38,20 @@
                     <VBox spacing="10">
                         <children>
                             <!-- Introduction -->
-                            <Label styleClass="article-subheading" text="Whether you're buying your first car or replacing an on-the-blink laptop, a loan may seem like a good way to borrow the funds needed."/>
+                            <Label styleClass="article-subheading" text="Whether you're buying your first car or replacing an on-the-blink laptop, a loan may seem like a good way to borrow the funds needed." accessibleText="Introduction to loans for young people."/>
 
-                            <Label styleClass="article-content" text="How old do I have to be to get a loan? "/>
-                            <Label styleClass="article-content" text="Most lenders will offer a loan to you if you're aged 18 or over, and have a decent credit score and reliable income. "/>
+                            <Label styleClass="article-content" text="How old do I have to be to get a loan? " accessibleText="Loan eligibility requirements"/>
+                            <Label styleClass="article-content" text="Most lenders will offer a loan to you if you're aged 18 or over, and have a decent credit score and reliable income. " accessibleText="To be eligible for a loan, you must have a income and decent credit score."/>
 
-                            <Label styleClass="article-content" text="Your options for getting a loan as a young person may be limited, but it is still possible to borrow money if you're over 18 and have a reasonable credit score. "/>
-                            <Label styleClass="article-content" text="Again, this should only be done after careful consideration."/>
-                            <Label styleClass="article-content" text="The most common types of loans available to young people are:"/>
+                            <Label styleClass="article-content" text="Your options for getting a loan as a young person may be limited, but it is still possible to borrow money if you're over 18 and have a reasonable credit score. " accessibleText="Options are limited for young people when it comes to loans but it is still possible for those aged over 18 with a decent credit score."/>
+                            <Label styleClass="article-content" text="Again, this should only be done after careful consideration." accessibleText="It is important to take careful consideration before taking out a loan."/>
+                            <Label styleClass="article-content" text="The most common types of loans available to young people are:" accessibleText="The most common types of loans available to young people are."/>
 
-                            <Label styleClass="article-content" text="• Unsecured personal loans: A loan that you pay back in monthly instalments over a set period of time."/>
+                            <Label styleClass="article-content" text="• Unsecured personal loans: A loan that you pay back in monthly instalments over a set period of time." accessibleText="Unsecured personal loans are paid back in monthly instalments."/>
 
-                            <Label styleClass="article-content" text="• Guarantor loans: Like a personal loan, except a family member or close friend agrees to cover your repayments if you can't."/>
+                            <Label styleClass="article-content" text="• Guarantor loans: Like a personal loan, except a family member or close friend agrees to cover your repayments if you can't." accessibleText="Guarantor loans can be paid back by family or close friend if you cannot."/>
 
-                            <Label styleClass="article-content" text="But be warned: we'd caution against these types of loans where possible. They usually come with very high interest rates."/>
+                            <Label styleClass="article-content" text="But be warned: we'd caution against these types of loans where possible. They usually come with very high interest rates." accessibleText="Be cautious before taking out a loan"/>
 
                         </children>
 
