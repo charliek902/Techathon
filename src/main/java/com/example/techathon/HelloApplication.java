@@ -20,31 +20,41 @@ public class HelloApplication extends Application {
         welcomeScene.getStylesheets().add(HelloApplication.class.getResource("/com/example/techathon/app.css").toExternalForm());
 
         FXMLLoader fxmlLoader2 = new FXMLLoader(HelloApplication.class.getResource("chooseCalculator-view.fxml"));
-
-
         Scene calculatorScene = new Scene(fxmlLoader2.load(), 600, 600);
         calculatorScene.getStylesheets().add(HelloApplication.class.getResource("/com/example/techathon/app.css").toExternalForm());
 
         FXMLLoader fxmlLoader3 = new FXMLLoader(HelloApplication.class.getResource("Learn-view.fxml"));
         Scene learnScene = new Scene(fxmlLoader3.load(), 600, 600);
         learnScene.getStylesheets().add(HelloApplication.class.getResource("/com/example/techathon/app.css").toExternalForm());
+
         FXMLLoader fxmlLoader4 = new FXMLLoader(HelloApplication.class.getResource("Quiz-view.fxml"));
         Scene quizScene = new Scene(fxmlLoader4.load(), 600, 600);
+        quizScene.getStylesheets().add(HelloApplication.class.getResource("/com/example/techathon/app.css").toExternalForm());
 
         FXMLLoader fxmlLoader5 = new FXMLLoader(HelloApplication.class.getResource("ISA-calculator.fxml"));
         Scene ISA_Calc = new Scene(fxmlLoader5.load(), 600, 600);
+        ISA_Calc.getStylesheets().add(HelloApplication.class.getResource("/com/example/techathon/app.css").toExternalForm());
+
         FXMLLoader fxmlLoader6 = new FXMLLoader(HelloApplication.class.getResource("pension-calculator.fxml"));
         Scene pension_Calc = new Scene(fxmlLoader6.load(), 600, 600);
+        pension_Calc.getStylesheets().add(HelloApplication.class.getResource("/com/example/techathon/app.css").toExternalForm());
+
         FXMLLoader fxmlLoader7 = new FXMLLoader(HelloApplication.class.getResource("mortgage-calculator.fxml"));
         Scene mortgage_Calc = new Scene(fxmlLoader7.load(), 600, 600);
+        mortgage_Calc.getStylesheets().add(HelloApplication.class.getResource("/com/example/techathon/app.css").toExternalForm());
+
         FXMLLoader loaderForBudgetCalc = new FXMLLoader(HelloApplication.class.getResource("budgeting-calculator.fxml"));
         Scene budgetCalc = new Scene(loaderForBudgetCalc.load(), 600, 600);
+        budgetCalc.getStylesheets().add(HelloApplication.class.getResource("/com/example/techathon/app.css").toExternalForm());
 
         FXMLLoader fxmlLoader8 = new FXMLLoader(HelloApplication.class.getResource("Answers-view.fxml"));
         Scene answersScene = new Scene(fxmlLoader8.load(), 600, 600);
+        answersScene.getStylesheets().add(HelloApplication.class.getResource("/com/example/techathon/app.css").toExternalForm());
 
         FXMLLoader fxmlLoader9 = new FXMLLoader(HelloApplication.class.getResource("Question.fxml"));
         Scene questionsScene = new Scene(fxmlLoader9.load(), 600, 600);
+        questionsScene.getStylesheets().add(HelloApplication.class.getResource("/com/example/techathon/app.css").toExternalForm());
+
 
         sceneManager.addScene(welcomeScene, "welcome");
         sceneManager.addScene(calculatorScene, "calculator");
