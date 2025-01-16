@@ -45,6 +45,10 @@ public class LearnViewController {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/techathon/Article1.fxml"));
         Scene scene = new Scene(loader.load(), 600, 600);
 
+        // Set the controller into article1 file and sets both navController/sceneManager so navigation should work in this file.
+        ArticleController articleController = loader.getController();
+        articleController.setNavContoller(navController);
+        articleController.setSceneManager(sceneManager);
 
         scene.getStylesheets().add(getClass().getResource("/com/example/techathon/app.css").toExternalForm());
         // Node used to handle mouse action and targets the VBox that is being clicked and activates the scene

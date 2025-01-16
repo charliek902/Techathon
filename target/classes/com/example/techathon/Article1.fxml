@@ -7,7 +7,7 @@
 <?import javafx.scene.image.Image?>
 
 <?import javafx.scene.image.ImageView?>
-<BorderPane stylesheets="app.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.techathon.LearnViewController">
+<BorderPane stylesheets="app.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.techathon.ArticleController">
     <center>
         <Pane fx:id="body" styleClass="body-style">
             <children>
