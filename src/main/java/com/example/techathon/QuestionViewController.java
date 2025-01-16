@@ -1,5 +1,6 @@
 package com.example.techathon;
 import javafx.fxml.FXML;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import java.util.HashSet;
@@ -223,6 +224,11 @@ public class QuestionViewController {
         this.user_page += 1;
         if(this.user_page >= 10){
             // route to answers --> populate answer template with results
+            Scene answerScene = this.sceneManager.getScene("answers");
+            this.sceneManager.applyStage(answerScene, "Quiz Answers");
+
+            System.out.println("below:");
+            System.out.println(answerScene);
 
         }
         else{
@@ -234,10 +240,6 @@ public class QuestionViewController {
     }
 
     private void populateTemplate(String page, String quizType){
-
-        System.out.println("selected quiz type:");
-        System.out.println(quizType);
-
         switch (quizType) {
             case "personality":
 
@@ -265,7 +267,6 @@ public class QuestionViewController {
 
         switch (QuizType) {
             case "personality":
-                System.out.println("goes here check!");
                 for (String key : Questions_Options_Personality_Map.keySet()) {
                     if(!foundFirstPage){
                         this.currentPage = key;
@@ -276,7 +277,6 @@ public class QuestionViewController {
 
                 }
             case "finance":
-                System.out.println("goes here check 2!");
                 for (String key : Questions_Options_Finance_Map.keySet()) {
                     if(!foundFirstPage){
                         this.currentPage = key;
@@ -290,7 +290,6 @@ public class QuestionViewController {
 
     public String getNextPage(String currentPage, String QuizType){
         String nextPage = "";
-        System.out.println(this.seenQuestions);
         switch(QuizType){
             case "personality":
                 for (String key : Questions_Options_Personality_Map.keySet()) {
@@ -303,11 +302,7 @@ public class QuestionViewController {
             case "finance":
 
                 for (String key : Questions_Options_Finance_Map.keySet()) {
-                    System.out.println(this.seenQuestions);
-
-
                     if(!(this.seenQuestions.contains(key))){
-                        System.out.println("goes in here!");
                         this.seenQuestions.add(key);
                         return key;
                     }
