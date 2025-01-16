@@ -1,6 +1,11 @@
 package com.example.techathon;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.TextArea;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class NotesViewController {
 
@@ -10,6 +15,8 @@ public class NotesViewController {
         this.navController = controller;
     }
 
+    @FXML
+    private TextArea notes;
     @FXML
     protected void onHelloButtonClick() {
         this.navController.onHomeButtonClick();
@@ -30,5 +37,37 @@ public class NotesViewController {
     protected void onNotesButtonClick() {
         this.navController.onNotesButtonClick();
     }
+    @FXML
+    protected void saveNotes() {
+        // save to notes.txt
+
+
+    }
+
+    protected void loadNotes() {
+        StringBuilder textFile = new StringBuilder();
+        try (BufferedReader reader = new BufferedReader(new FileReader("../../../resources/com/example/techathon/notes.txt"))) {
+            String line;
+            while ((line = reader.readLine()) != null) {
+                textFile.append(line).append("\n");
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        System.out.println("test:");
+        System.out.println(textFile.toString());
+
+
+        this.notes.setText(textFile.toString());
+    }
+
+
+
+
+
+
+
+
 }
 
