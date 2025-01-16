@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -13,28 +14,21 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<?import javafx.scene.control.Button?>
-
 
 <BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.techathon.CalculatorController">
    <top>
-      <Pane fx:id="header" BorderPane.alignment="CENTER" styleClass="nav-pane">
+      <Pane fx:id="header" styleClass="nav-pane" BorderPane.alignment="CENTER">
          <children>
             <HBox alignment="CENTER_LEFT" spacing="15.0">
                <children>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#onHelloButtonClick"
-                          styleClass="menu-btn" text="Home"/>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#onLearnButtonClick"
-                          styleClass="menu-btn" text="Learn"/>
-                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#onQuizButtonClick"
-                          styleClass="menu-btn" text="Quiz"/>
-                  <Button mnemonicParsing="false" onAction="#onCalculatorButtonClick" styleClass="menu-btn"
-                          text="Calculators"/>
-                  <Button mnemonicParsing="false" text="Notes" styleClass="menu-btn" alignment="CENTER"
-                          onAction="#onNotesButtonClick"/>
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#onHelloButtonClick" styleClass="menu-btn" text="Home" />
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#onLearnButtonClick" styleClass="menu-btn" text="Learn" />
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#onQuizButtonClick" styleClass="menu-btn" text="Quiz" />
+                  <Button mnemonicParsing="false" onAction="#onCalculatorButtonClick" styleClass="menu-btn" text="Calculators" />
+                  <Button alignment="CENTER" mnemonicParsing="false" onAction="#onNotesButtonClick" styleClass="menu-btn" text="Notes" />
                </children>
                <padding>
-                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </padding>
             </HBox>
          </children>
@@ -81,12 +75,12 @@
                                     <Label layoutX="79.0" layoutY="94.0" text="Pension*" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                                     <Label layoutX="267.0" layoutY="94.0" text="Rent*" GridPane.rowIndex="6" />
                                     <Label layoutX="108.0" layoutY="184.0" text="Additional Items*" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                                    <TextField GridPane.rowIndex="1" />
-                                    <TextField layoutX="47.0" layoutY="40.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                                    <TextField layoutX="47.0" layoutY="40.0" GridPane.rowIndex="4" />
-                                    <TextField layoutX="47.0" layoutY="130.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                                    <TextField layoutX="214.0" layoutY="130.0" GridPane.rowIndex="7" />
-                                    <TextField layoutX="47.0" layoutY="220.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                    <TextField fx:id="salaryField" GridPane.rowIndex="1" />
+                                    <TextField fx:id="investmentsField" layoutX="47.0" layoutY="40.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="universalCreditField" layoutX="47.0" layoutY="40.0" GridPane.rowIndex="4" />
+                                    <TextField fx:id="pensionsField" layoutX="47.0" layoutY="130.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField fx:id="rentField" layoutX="214.0" layoutY="130.0" GridPane.rowIndex="7" />
+                                    <TextField fx:id="additionalIncomeField" layoutX="47.0" layoutY="220.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                                  </children>
                               </GridPane>
                            </children>
@@ -117,12 +111,12 @@
                               <Label layoutX="79.0" layoutY="94.0" text="Life Insurance*" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                               <Label layoutX="267.0" layoutY="94.0" text="Council Tax*" GridPane.rowIndex="6" />
                               <Label layoutX="108.0" layoutY="184.0" text="Broadband*" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                              <TextField GridPane.rowIndex="1" />
-                              <TextField layoutX="47.0" layoutY="40.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField layoutX="47.0" layoutY="40.0" GridPane.rowIndex="4" />
-                              <TextField layoutX="47.0" layoutY="130.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <TextField layoutX="214.0" layoutY="130.0" GridPane.rowIndex="7" />
-                              <TextField layoutX="47.0" layoutY="220.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <TextField fx:id="mortgageCostField" GridPane.rowIndex="1" />
+                              <TextField fx:id="rentCostField" layoutX="47.0" layoutY="40.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="utilitiesCostField" layoutX="47.0" layoutY="40.0" GridPane.rowIndex="4" />
+                              <TextField fx:id="lifeInsuranceCostField" layoutX="47.0" layoutY="130.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="councilTaxField" layoutX="214.0" layoutY="130.0" GridPane.rowIndex="7" />
+                              <TextField fx:id="broadbandCostField" layoutX="47.0" layoutY="220.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                            </children>
                         </GridPane>
                      </content>
@@ -151,12 +145,12 @@
                               <Label layoutX="79.0" layoutY="94.0" text="Travel*" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                               <Label layoutX="267.0" layoutY="94.0" text="Clothing*" GridPane.rowIndex="6" />
                               <Label layoutX="108.0" layoutY="184.0" text="Toiletries*" GridPane.columnIndex="1" GridPane.rowIndex="6" />
-                              <TextField GridPane.rowIndex="1" />
-                              <TextField layoutX="47.0" layoutY="40.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField layoutX="47.0" layoutY="40.0" GridPane.rowIndex="4" />
-                              <TextField layoutX="47.0" layoutY="130.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <TextField layoutX="214.0" layoutY="130.0" GridPane.rowIndex="7" />
-                              <TextField layoutX="47.0" layoutY="220.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                              <TextField fx:id="groceriesCostField" GridPane.rowIndex="1" />
+                              <TextField fx:id="deliveryCostField" layoutX="47.0" layoutY="40.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="alcoholCostField" layoutX="47.0" layoutY="40.0" GridPane.rowIndex="4" />
+                              <TextField fx:id="travelCostField" layoutX="47.0" layoutY="130.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="clothingCostField" layoutX="214.0" layoutY="130.0" GridPane.rowIndex="7" />
+                              <TextField fx:id="toiletriesCostField" layoutX="47.0" layoutY="220.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
                            </children>
                         </GridPane>
                      </content>
@@ -184,16 +178,16 @@
                               <Label layoutX="87.0" layoutY="10.0" text="Hobbies*" GridPane.rowIndex="3" />
                               <Label layoutX="79.0" layoutY="94.0" text="Celebrations*" GridPane.columnIndex="1" GridPane.rowIndex="3" />
                               <Label layoutX="267.0" layoutY="94.0" text="Holidays*" GridPane.rowIndex="6" />
-                              <TextField GridPane.rowIndex="1" />
-                              <TextField layoutX="47.0" layoutY="40.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                              <TextField layoutX="47.0" layoutY="40.0" GridPane.rowIndex="4" />
-                              <TextField layoutX="47.0" layoutY="130.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                              <TextField layoutX="214.0" layoutY="130.0" GridPane.rowIndex="7" />
+                              <TextField fx:id="daysOutCostField" GridPane.rowIndex="1" />
+                              <TextField fx:id="subscriptionsCostField" layoutX="47.0" layoutY="40.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField fx:id="hobbiesCostField" layoutX="47.0" layoutY="40.0" GridPane.rowIndex="4" />
+                              <TextField fx:id="celebrationsCostField" layoutX="47.0" layoutY="130.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField fx:id="holidaysCostField" layoutX="214.0" layoutY="130.0" GridPane.rowIndex="7" />
                            </children>
                         </GridPane>
                      </content>
                   </Tab>
-                  <Tab text="Result and Summary">
+                  <Tab onSelectionChanged="#handleBudgetCalculate" text="Result and Summary">
                      <content>
                         <VBox alignment="CENTER">
                            <children>
@@ -218,8 +212,8 @@
                                           <Font size="17.0" />
                                        </font>
                                     </Label>
-                                    <Label text="#" GridPane.columnIndex="1" />
-                                    <Label text="#" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label fx:id="totalIncomeLabel" text="#" GridPane.columnIndex="1" />
+                                    <Label fx:id="totalCostLabel" text="#" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                                  </children>
                               </GridPane>
                               <HBox alignment="CENTER_LEFT" spacing="100.0" style="-fx-background-color: green;">
@@ -229,7 +223,7 @@
                                           <Font size="17.0" />
                                        </font>
                                     </Label>
-                                    <Label text="#" textFill="WHITE" />
+                                    <Label fx:id="budgetResultLabel" text="#" textFill="WHITE" />
                                  </children>
                                  <padding>
                                     <Insets left="50.0" />
