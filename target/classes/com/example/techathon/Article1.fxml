@@ -50,7 +50,7 @@
     </center>
 
     <top>
-        <Pane fx:id="header" BorderPane.alignment="CENTER">
+        <Pane fx:id="header" BorderPane.alignment="CENTER" styleClass="nav-pane">
             <children>
                 <HBox alignment="CENTER_LEFT" spacing="15.0">
                     <children>
