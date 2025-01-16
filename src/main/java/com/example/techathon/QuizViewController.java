@@ -31,10 +31,12 @@ public class QuizViewController {
     @FXML
     protected void onFinanceQuiz() {
         // finance quiz
+        QuestionViewController questionTemplate = new QuestionViewController("finance", this.sceneManager);
     }
     @FXML
     protected void onPersonalityQuiz() {
-        // finance quiz
+        // personality quiz
+        QuestionViewController questionTemplate = new QuestionViewController("personality", this.sceneManager);
     }
 
 

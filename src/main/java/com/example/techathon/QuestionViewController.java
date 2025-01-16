@@ -1,5 +1,4 @@
 package com.example.techathon;
-
 import java.util.HashMap;
 
 // stores user information and states on each quiz
@@ -8,6 +7,7 @@ public class QuestionViewController {
     private int user_page;
     private int correct;
     private String currentPage;
+    private SceneManager sceneManager;
 
     private HashMap<String, String[]> Questions_Options_Finance_Map;
     private HashMap<String, Integer> Questions_Finance_Correct_Answers_Map;
@@ -16,10 +16,11 @@ public class QuestionViewController {
     private HashMap<String, Integer> Questions_Personality_Correct_Answers_Map;
 
 
-    public QuestionViewController(String currentQuiz){
+    public QuestionViewController(String currentQuiz, SceneManager sceneManager){
         this.currentQuiz = currentQuiz;
         this.user_page = 1;
         this.correct = 0;
+        this.sceneManager = sceneManager;
         this.Questions_Options_Finance_Map = new HashMap<>(10);
         this.Questions_Finance_Correct_Answers_Map = new HashMap<>(10);
         this.Questions_Options_Personality_Map = new HashMap<>(10);
@@ -170,27 +171,49 @@ public class QuestionViewController {
         });
     }
 
-    public void handlePrev(){
-        this.user_page -= 1;
-        if(this.user_page < 1){
-            // route to quiz menu page
-        }
-        else{
-            String prevPage = this.getNextPage(this.currentPage, this.currentQuiz);
-            // populate question template with next page
-        }
-
-    }
 
     public void handleNext(){
         this.user_page += 1;
         if(this.user_page > 10){
             // route to answers --> populate answer template with results
+
+
+
         }
         else{
             String nextPage = this.getNextPage(this.currentPage, this.currentQuiz);
-            // populate question template with next page
+            this.populateTemplate(nextPage, this.currentQuiz);
+        }
+    }
 
+    private void populateTemplate(String page, String quizType){
+        switch (quizType) {
+            case "personality":
+                String[] personalityOptions = this.Questions_Options_Personality_Map.get(page);
+
+
+            case "finance":
+                String[] financeOptions = this.Questions_Options_Finance_Map.get(page);
+
+        }
+    }
+
+
+
+    public String getFirstPage(String QuizType) {
+        switch (QuizType) {
+            case "personality":
+                for (String key : Questions_Options_Personality_Map.keySet()) {
+                    this.currentPage = key;
+                    return key;
+                }
+            case "finance":
+                for (String key : Questions_Options_Personality_Map.keySet()) {
+                    this.currentPage = key;
+                    return key;
+                }
+            default:
+                return "";
         }
     }
 
@@ -225,41 +248,7 @@ public class QuestionViewController {
                 return "";
         }
     }
-/*
-    public String getPrevPage(String currentPage, String QuizType){
-        Boolean foundCurrentPage = false;
-        String prevPage = "";
-        String currentPage = "";
-        switch(QuizType){
-            case "personality":
-                for (String key : Questions_Options_Personality_Map.keySet()) {
-                    if(foundCurrentPage && !foundNextPage){
-                        foundCurrentPage = true;
-                        nextPage = key;
-                    }
-                    else if(key == currentPage){
-                        foundCurrentPage = true;
-                    }
-                }
-                return nextPage;
-            case "finance":
-                for (String key : Questions_Options_Finance_Map.keySet()) {
-                    if(foundCurrentPage && !foundNextPage){
-                        foundNextPage = true;
-                        nextPage = key;
-                    }
-                    else if(key == currentPage){
-                        foundCurrentPage = true;
-                    }
-                }
-                return nextPage;
-            default:
-                return "";
-        }
-        return "";
 
-    }
-    */
 
     public void handleSelectedAnswer(){
 
