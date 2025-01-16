@@ -226,6 +226,7 @@ public class QuestionViewController {
 
         }
         else{
+            this.handleSelectedAnswer();
             this.clearSelectedRadioButtons();
             String nextPage = this.getNextPage(this.currentPage, this.currentQuiz);
             this.populateTemplate(nextPage, this.currentQuiz);
@@ -249,12 +250,12 @@ public class QuestionViewController {
 
             case "finance":
                 if(quizType.equals("finance")){
-                String[] financeOptions = this.Questions_Options_Finance_Map.get(page);
-                this.question.setText(page);
-                this.answer1.setText(financeOptions[0]);
-                this.answer2.setText(financeOptions[1]);
-                this.answer3.setText(financeOptions[2]);
-                this.answer4.setText(financeOptions[3]);
+                    String[] financeOptions = this.Questions_Options_Finance_Map.get(page);
+                    this.question.setText(page);
+                    this.answer1.setText(financeOptions[0]);
+                    this.answer2.setText(financeOptions[1]);
+                    this.answer3.setText(financeOptions[2]);
+                    this.answer4.setText(financeOptions[3]);
                 }
         }
     }
