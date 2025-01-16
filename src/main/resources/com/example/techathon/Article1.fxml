@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.Image?>
+
+<?import javafx.scene.image.ImageView?>
+<BorderPane stylesheets="app.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.techathon.LearnViewController">
+    <center>
+        <Pane fx:id="body" styleClass="body-style">
+            <children>
+                <VBox  fillWidth="false">
+                    <!-- Title of Article-->
+                    <children>
+
+                        <Label text="Boost your chances at a mortgage">
+                            <font>
+                                <Font name="Bodoni MT" size="34.0" />
+                            </font>
+                        </Label>
+                        <!--Article Image-->
+                        <ImageView fitWidth="100.0" fitHeight="100.0">
+                            <image>
+                                <Image url="https://www.moneysavingexpert.com/content/dam/mse/images/hero/hero-mortgageshome-BoostMortgagesChances.jpg.rendition.992.992.jpg"/>
+
+                            </image>
+                        </ImageView>
+                    </children>
+
+                    <padding>
+                        <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />
+                    </padding>
+                    <!-- Article Content-->
+                    <VBox spacing="10">
+                        <children>
+                            <!-- Introduction -->
+                            <Label text="Don't expect every lender to fancy you"/>
+                            <Label wrapText="Every lender has its own method to decide whether it wants to lend to you. If you fit a lender's criteria, you might be accepted quickly. If you're far from ideal, your chances of rejection will increase."/>
+
+                        </children>
+                    </VBox>
+
+                </VBox>
+
+
+            </children>
+        </Pane>
+    </center>
+
+    <top>
+        <Pane fx:id="header" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER_LEFT" spacing="15.0">
+                    <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#onHelloButtonClick" styleClass="menu-btn" text="Home" />
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#onLearnButtonClick" styleClass="menu-btn" text="Learn" />
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#onQuizButtonClick" styleClass="menu-btn" text="Quiz" />
+                        <Button mnemonicParsing="false" onAction="#onCalculatorButtonClick" styleClass="menu-btn" text="Calculators" />
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </Pane>
+    </top>
+    <bottom>
+        <Pane fx:id="footer" style="-fx-background-color: #6e8d63;" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="20.0" layoutY="10.0" text="Copyright @ WOF 2025" textFill="WHITE" wrapText="true" />
+                <Label layoutX="198.0" layoutY="10.0" text="WOF is a trademark under the FinanceED company." textFill="WHITE" wrapText="true" />
+            </children>
+        </Pane>
+    </bottom>
+</BorderPane>
