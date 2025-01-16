@@ -113,19 +113,12 @@ public class HelloApplication extends Application {
         budgetCalcController.setNavContoller(navController);
         notesViewController.setNavContoller(navController);
 
-
-
-
         sceneManager.applyStage(welcomeScene, "Welcome!");
     }
 
     public static void main(String[] args) {
         launch();
     }
-
-
-
-
 
 
 }

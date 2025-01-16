@@ -12,7 +12,7 @@
     <center>
         <Pane fx:id="body" style="-fx-background-color: rgb(140,193,193);">
             <children>
-                <VBox alignment="CENTER" fillWidth="false">
+                <VBox alignment="CENTER" spacing="10" fillWidth="false">
                     <children>
                         <Label styleClass="home-heading" text="Notes Page">
                             <font>
@@ -20,7 +20,7 @@
                             </font>
                         </Label>
                         <TextArea fx:id="notes" prefWidth="350.0" prefHeight="300.0" />
-                        <Button mnemonicParsing="false" style="-fx-background-color: #4545b3; -fx-alignment: centre;" text="Save Notes" textFill="WHITE" onAction="#saveNotes" />
+                        <Button mnemonicParsing="false" style="-fx-background-color: #4545b3; -fx-alignment: right; -fx-cursor: hand" text="Save Notes" textFill="WHITE" onAction="#saveNotes" />
                     </children>
                     <padding>
                         <Insets bottom="100.0" left="100.0" right="100.0" top="100.0" />

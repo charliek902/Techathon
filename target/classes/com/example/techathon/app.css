@@ -8,6 +8,7 @@
 .menu-btn{
     -fx-background-color: transparent;
     -fx-text-fill: black;
+    -fx-cursor: hand;
 }
 
 .menu-btn:hover{
@@ -80,5 +81,6 @@
     -fx-background-color: transparent;
     -fx-border-color: black;
 }
+
 
 

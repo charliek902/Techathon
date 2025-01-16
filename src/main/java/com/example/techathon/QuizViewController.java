@@ -51,7 +51,7 @@ public class QuizViewController {
         questionTemplate.setFirstPage("finance");
 
 
-        Scene question = new Scene(root);
+        Scene question = new Scene(root, 600, 600);
         this.sceneManager.applyStage(question, "Finance quiz");
 
     }
@@ -67,7 +67,7 @@ public class QuizViewController {
         questionTemplate.setQuiz("personality");
         questionTemplate.setFirstPage("personality");
 
-        Scene question = new Scene(root);
+        Scene question = new Scene(root, 600, 600);
         this.sceneManager.applyStage(question, "Personality Quiz");
     }
 
