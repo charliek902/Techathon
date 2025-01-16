@@ -44,7 +44,7 @@
         <!--Article 1 -->
         <VBox alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" onMouseClicked="#goToArticle1"> <!--GridPanel places the article in a section the grid-->
             <children>
-                <ImageView fitWidth="100.0" fitHeight="100.0">
+                <ImageView fitWidth="100.0" fitHeight="100.0" accessibleText="Image of a loan for young people.">
                     <image>
                         <Image url="https://www.moneysavingexpert.com/content/dam/loan-new-car.jpg.rendition.992.992.jpg"/>
 
@@ -57,7 +57,7 @@
         <!-- Article 2-->
         <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="0">
             <children>
-                <ImageView fitWidth="100.0" fitHeight="100.0">
+                <ImageView fitWidth="100.0" fitHeight="100.0" accessibleText="Image of a piggy bank.">
                     <image>
                         <Image url="https://www.moneysavingexpert.com/content/dam/mse/editorial-image-library/homepage/hero-homepage-tip-piggy-bank-egg-timer-savings-isa.jpg.rendition.992.992.jpg"/>
 
@@ -68,7 +68,7 @@
         </VBox>
 
         <!-- Article 3-->
-        <VBox alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <VBox alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="1" accessibleText="Image of a jar labelled retirement filled with pennies.">
             <children>
                 <ImageView fitWidth="100.0" fitHeight="100.0">
                     <image>
@@ -81,7 +81,7 @@
         </VBox>
 
         <!-- Article 4-->
-        <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" accessibleText="Image of a budget planner sheet">
             <children>
                 <ImageView fitWidth="100.0" fitHeight="100.0">
                     <image>
