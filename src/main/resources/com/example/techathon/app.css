@@ -90,6 +90,24 @@
     -fx-background-color: transparent;
 }
 
+/*--- Learn view styling ----*/
+.article-container{
+    -fx-border-color: black;
+    -fx-border-radius: 10px;
+
+
+}
+
+.article-container:hover{
+    -fx-background-color: #cbeef3;
+}
+
+.article-heading{
+    -fx-font-size: larger;
+    -fx-padding-top: 8px;
+    -fx-font-weight: bold;
+}
+
 
 /*---- Article1 Styling---*/
 

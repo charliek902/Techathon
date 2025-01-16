@@ -15,7 +15,7 @@
                     <!-- Title of Article-->
                     <children>
 
-                        <Label styleClass="article-title" text="Loans for young people" accessibleRole="heading" accessibleRoleDescription="Main Title" >
+                        <Label styleClass="article-title" text="Loans for young people"  accessibleRoleDescription="Main Title" >
                             <font>
                                 <Font name="Bodoni MT" size="34.0" />
                             </font>
