@@ -46,6 +46,7 @@ public class QuizViewController {
 
 
         questionTemplate.setSceneManager(this.sceneManager);
+        questionTemplate.setNavContoller(this.navController);
         questionTemplate.setQuiz("finance");
         questionTemplate.setFirstPage("finance");
 
@@ -62,6 +63,7 @@ public class QuizViewController {
         QuestionViewController questionTemplate = loader.getController();
 
         questionTemplate.setSceneManager(this.sceneManager);
+        questionTemplate.setNavContoller(this.navController);
         questionTemplate.setQuiz("personality");
         questionTemplate.setFirstPage("personality");
 

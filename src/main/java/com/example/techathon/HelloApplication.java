@@ -89,8 +89,6 @@ public class HelloApplication extends Application {
         QuestionViewController question = fxmlLoader9.getController();
         NotesViewController notesViewController = fxmlLoader10.getController();
 
-
-
         // add scene manager to controllers
         welcomeController.setSceneManager(sceneManager);
         chooseCalculatorController.setSceneManager(sceneManager);
