@@ -1,14 +1,241 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.Button?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.example.techathon.CalculatorController"
-            prefHeight="400.0" prefWidth="600.0">
 
-</AnchorPane>
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.techathon.CalculatorController">
+    <top>
+        <Pane fx:id="header" BorderPane.alignment="CENTER">
+            <children>
+                <HBox alignment="CENTER_LEFT" spacing="15.0">
+                    <children>
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#onHelloButtonClick" styleClass="menu-btn" text="Home" />
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#onLearnButtonClick" styleClass="menu-btn" text="Learn" />
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#onQuizButtonClick" styleClass="menu-btn" text="Quiz" />
+                        <Button mnemonicParsing="false" onAction="#onCalculatorButtonClick" styleClass="menu-btn" text="Calculators" />
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </Pane>
+    </top>
+    <center>
+      <VBox BorderPane.alignment="CENTER">
+         <children>
+            <Pane>
+               <children>
+                  <Label text="Measure your budget with our handy tool!" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutY="30.0" text="Optional Fields are marked with *" wrapText="true" />
+               </children>
+            </Pane>
+            <TabPane tabClosingPolicy="UNAVAILABLE">
+               <tabs>
+                  <Tab text="Income">
+                     <content>
+                        <VBox style="-fx-background-color: grey;">
+                           <children>
+                              <GridPane alignment="CENTER" hgap="20.0" style="-fx-background-color: white;" vgap="10.0">
+                                <columnConstraints>
+                                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" percentWidth="40.0" />
+                                  <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" percentWidth="40.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints fillHeight="false" valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                  <RowConstraints fillHeight="false" valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints fillHeight="false" valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Label text="Pay (After Tax)" />
+                                    <Label text="Investments*" GridPane.columnIndex="1" />
+                                    <Label layoutX="87.0" layoutY="10.0" text="Universal Credit*" GridPane.rowIndex="3" />
+                                    <Label layoutX="79.0" layoutY="94.0" text="Pension*" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Label layoutX="267.0" layoutY="94.0" text="Rent*" GridPane.rowIndex="6" />
+                                    <Label layoutX="108.0" layoutY="184.0" text="Additional Items*" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                                    <TextField GridPane.rowIndex="1" />
+                                    <TextField layoutX="47.0" layoutY="40.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField layoutX="47.0" layoutY="40.0" GridPane.rowIndex="4" />
+                                    <TextField layoutX="47.0" layoutY="130.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <TextField layoutX="214.0" layoutY="130.0" GridPane.rowIndex="7" />
+                                    <TextField layoutX="47.0" layoutY="220.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </VBox>
+                     </content>
+                  </Tab>
+                  <Tab text="Bills">
+                     <content>
+                        <GridPane alignment="CENTER" hgap="20.0" style="-fx-background-color: white;" vgap="10.0">
+                           <columnConstraints>
+                              <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" percentWidth="40.0" />
+                              <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" percentWidth="40.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints fillHeight="false" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Mortgage*" />
+                              <Label text="Rent*" GridPane.columnIndex="1" />
+                              <Label layoutX="87.0" layoutY="10.0" text="Utilities*" GridPane.rowIndex="3" />
+                              <Label layoutX="79.0" layoutY="94.0" text="Life Insurance*" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label layoutX="267.0" layoutY="94.0" text="Council Tax*" GridPane.rowIndex="6" />
+                              <Label layoutX="108.0" layoutY="184.0" text="Broadband*" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <TextField GridPane.rowIndex="1" />
+                              <TextField layoutX="47.0" layoutY="40.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField layoutX="47.0" layoutY="40.0" GridPane.rowIndex="4" />
+                              <TextField layoutX="47.0" layoutY="130.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField layoutX="214.0" layoutY="130.0" GridPane.rowIndex="7" />
+                              <TextField layoutX="47.0" layoutY="220.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                           </children>
+                        </GridPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Living Costs">
+                     <content>
+                        <GridPane alignment="CENTER" hgap="20.0" style="-fx-background-color: white;" vgap="10.0">
+                           <columnConstraints>
+                              <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" percentWidth="40.0" />
+                              <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" percentWidth="40.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints fillHeight="false" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Groceries*" />
+                              <Label text="Deliveries*" GridPane.columnIndex="1" />
+                              <Label layoutX="87.0" layoutY="10.0" text="Alcohol*" GridPane.rowIndex="3" />
+                              <Label layoutX="79.0" layoutY="94.0" text="Travel*" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label layoutX="267.0" layoutY="94.0" text="Clothing*" GridPane.rowIndex="6" />
+                              <Label layoutX="108.0" layoutY="184.0" text="Toiletries*" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                              <TextField GridPane.rowIndex="1" />
+                              <TextField layoutX="47.0" layoutY="40.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField layoutX="47.0" layoutY="40.0" GridPane.rowIndex="4" />
+                              <TextField layoutX="47.0" layoutY="130.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField layoutX="214.0" layoutY="130.0" GridPane.rowIndex="7" />
+                              <TextField layoutX="47.0" layoutY="220.0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                           </children>
+                        </GridPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Leisure">
+                     <content>
+                        <GridPane alignment="CENTER" hgap="20.0" style="-fx-background-color: white;" vgap="10.0">
+                           <columnConstraints>
+                              <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" percentWidth="40.0" />
+                              <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" percentWidth="40.0" prefWidth="100.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints fillHeight="false" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label text="Days out*" />
+                              <Label text="Subscriptions*" GridPane.columnIndex="1" />
+                              <Label layoutX="87.0" layoutY="10.0" text="Hobbies*" GridPane.rowIndex="3" />
+                              <Label layoutX="79.0" layoutY="94.0" text="Celebrations*" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label layoutX="267.0" layoutY="94.0" text="Holidays*" GridPane.rowIndex="6" />
+                              <TextField GridPane.rowIndex="1" />
+                              <TextField layoutX="47.0" layoutY="40.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <TextField layoutX="47.0" layoutY="40.0" GridPane.rowIndex="4" />
+                              <TextField layoutX="47.0" layoutY="130.0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                              <TextField layoutX="214.0" layoutY="130.0" GridPane.rowIndex="7" />
+                           </children>
+                        </GridPane>
+                     </content>
+                  </Tab>
+                  <Tab text="Result and Summary">
+                     <content>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <GridPane alignment="CENTER" hgap="20.0" style="-fx-background-color: white;" vgap="10.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" percentWidth="40.0" />
+                                    <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="SOMETIMES" percentWidth="40.0" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints fillHeight="false" valignment="CENTER" />
+                                    <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                    <RowConstraints fillHeight="false" minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label text="Income">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="87.0" layoutY="10.0" text="Spending" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="#" GridPane.columnIndex="1" />
+                                    <Label text="#" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <HBox alignment="CENTER_LEFT" spacing="100.0" style="-fx-background-color: green;">
+                                 <children>
+                                    <Label text="Spare Cash" textFill="WHITE">
+                                       <font>
+                                          <Font size="17.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="#" textFill="WHITE" />
+                                 </children>
+                                 <padding>
+                                    <Insets left="50.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </content>
+                  </Tab>
+               </tabs>
+            </TabPane>
+         </children>
+      </VBox>
+   </center>
+</BorderPane>
