@@ -13,6 +13,10 @@
 .menu-btn:hover{
     -fx-background-color: #cbeef3;
 }
+.nav-pane{
+    -fx-border-color: #000000;
+    -fx-border-insets: 0,0,100,0;
+}
 
 .footer-style{
     -fx-background-color: #6e8d63;
