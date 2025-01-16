@@ -31,93 +31,79 @@
       </Pane>
    </top>
    <center>
-      <BorderPane>
-         <center>
-            <ScrollPane hbarPolicy="NEVER" pannable="true" vbarPolicy="NEVER" BorderPane.alignment="CENTER">
+      <VBox alignment="CENTER" fillWidth="false" styleClass="body-style">
+         <children>
+            <Label styleClass="choose-calculator-heading" text="Choose one of our calculators to help you understand your money." textAlignment="RIGHT">
+               <font>
+                  <Font size="19.0" />
+               </font>
+               <padding>
+                  <Insets bottom="20.0" left="15.0" top="20.0" />
+               </padding>
+            </Label>
+            <ScrollPane pannable="true" styleClass="choose-calculator-scrollpane">
                <content>
-                  <VBox>
+                  <TilePane alignment="CENTER" hgap="10.0" prefHeight="400.0" prefTileHeight="200.0" prefTileWidth="200.0" prefWidth="600.0" styleClass="body-style" vgap="10.0">
                      <children>
-                        <TilePane alignment="CENTER" hgap="10.0" prefHeight="400.0" prefWidth="600.0" vgap="10.0">
+                        <Pane>
                            <children>
-                              <Pane prefHeight="200.0" prefWidth="200.0">
-                                 <children>
-                                    <Button mnemonicParsing="false" onMouseClicked="#onISAButtonClick" prefHeight="200.0" prefWidth="200.0" styleClass="choose-ISAcalculator-btn" text="Savings ISA account">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Button>
-                                 </children>
-                              </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0">
-                                 <children>
-                                    <Button mnemonicParsing="false" onMouseClicked="#onPensionsButtonClick" prefHeight="200.0" prefWidth="200.0" styleClass="choose-Pensioncalculator-btn" text="Pensions">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Button>
-                                 </children>
-                              </Pane>
-                              <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
-                                 <children>
-                                    <Button mnemonicParsing="false" onMouseClicked="#onMortgageButtonClick" prefHeight="200.0" prefWidth="200.0" styleClass="choose-Mortgagecalculator-btn" text="Mortgage">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Button>
-                                 </children>
-                              </Pane>
-                              <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
-                                 <children>
-                                    <Button mnemonicParsing="false" onMouseClicked="#onBudgetButtonClick" prefHeight="200.0" prefWidth="200.0" styleClass="choose-budgetCalculator-btn" text="Budgeting">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Button>
-                                 </children>
-                              </Pane>
-                              <Pane layoutX="10.0" layoutY="410.0" prefHeight="200.0" prefWidth="200.0">
-                                 <children>
-                                    <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" styleClass="choose-exampleCalculator-btn" text="Button">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Button>
-                                 </children>
-                              </Pane>
-                              <Pane prefHeight="200.0" prefWidth="200.0">
-                                 <children>
-                                    <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" styleClass="choose-exampleCalculator-btn" text="Button">
-                                       <font>
-                                          <Font size="17.0" />
-                                       </font>
-                                    </Button>
-                                 </children>
-                              </Pane>
+                              <Button mnemonicParsing="false" onMouseClicked="#onISAButtonClick" prefHeight="200.0" prefWidth="200.0" styleClass="choose-ISAcalculator-btn" text="Savings ISA account">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Button>
                            </children>
-                        </TilePane>
+                        </Pane>
+                        <Pane>
+                           <children>
+                              <Button mnemonicParsing="false" onMouseClicked="#onPensionsButtonClick" prefHeight="200.0" prefWidth="200.0" styleClass="choose-Pensioncalculator-btn" text="Pensions">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <Button mnemonicParsing="false" onMouseClicked="#onMortgageButtonClick" prefHeight="200.0" prefWidth="200.0" styleClass="choose-Mortgagecalculator-btn" text="Mortgage">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="10.0">
+                           <children>
+                              <Button mnemonicParsing="false" onMouseClicked="#onBudgetButtonClick" prefHeight="200.0" prefWidth="200.0" styleClass="choose-budgetCalculator-btn" text="Budgeting">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="410.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" styleClass="choose-exampleCalculator-btn" text="Button">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane>
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" styleClass="choose-exampleCalculator-btn" text="Button">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
                      </children>
-                  </VBox>
+                  </TilePane>
                </content>
             </ScrollPane>
-         </center>
-         <top>
-            <HBox alignment="CENTER">
-               <children>
-                  <Pane>
-                     <children>
-                        <Label styleClass="choose-calculator-heading" text="Choose one of our calculators to help you understand your money." textAlignment="RIGHT">
-                           <font>
-                              <Font size="19.0" />
-                           </font>
-                           <padding>
-                              <Insets bottom="20.0" left="15.0" top="20.0" />
-                           </padding>
-                        </Label>
-                     </children>
-                  </Pane>
-               </children>
-            </HBox>
-         </top>
-      </BorderPane>
+         </children>
+      </VBox>
    </center>
 </BorderPane>
