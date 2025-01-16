@@ -42,54 +42,80 @@
 
 
         <!--Article 1 -->
-        <VBox alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" onMouseClicked="#goToArticle1"> <!--GridPanel places the article in a section the grid-->
+        <VBox alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="0" onMouseClicked="#goToArticle1" styleClass="article-container"> <!--GridPanel places the article in a section the grid-->
             <children>
-                <ImageView fitWidth="100.0" fitHeight="100.0">
+                <ImageView fitWidth="100.0" fitHeight="100.0" accessibleText="Image of a loan for young people.">
                     <image>
                         <Image url="https://www.moneysavingexpert.com/content/dam/loan-new-car.jpg.rendition.992.992.jpg"/>
 
                     </image>
                 </ImageView>
-                <Label text="Loans for young people"/>
+                <Label styleClass="article-heading" text="Loans for young people"/>
             </children>
         </VBox>
 
         <!-- Article 2-->
-        <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="0">
+        <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="0" styleClass="article-container">
             <children>
-                <ImageView fitWidth="100.0" fitHeight="100.0">
+                <ImageView fitWidth="100.0" fitHeight="100.0" accessibleText="Image of a piggy bank.">
                     <image>
                         <Image url="https://www.moneysavingexpert.com/content/dam/mse/editorial-image-library/homepage/hero-homepage-tip-piggy-bank-egg-timer-savings-isa.jpg.rendition.992.992.jpg"/>
 
                     </image>
                 </ImageView>
-                <Label text="What type of ISA should I get?"/>
+                <Label styleClass="article-heading" text="What type of ISA should I get?"/>
             </children>
         </VBox>
 
         <!-- Article 3-->
-        <VBox alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="1">
+        <VBox alignment="CENTER" GridPane.columnIndex="0" GridPane.rowIndex="1" styleClass="article-container">
             <children>
-                <ImageView fitWidth="100.0" fitHeight="100.0">
+                <ImageView fitWidth="100.0" fitHeight="100.0" accessibleText="Image of a jar labelled retirement filled with pennies.">
                     <image>
                         <Image url="https://www.moneysavingexpert.com/content/dam/mse/editorial-image-library/guide-images/hero-images/hero-banking-discount-pnesions.jpg.rendition.992.992.jpg"/>
 
                     </image>
                 </ImageView>
-                <Label text="Pension need-to-knows"/>
+                <Label styleClass="article-heading" text="Pension need-to-knows"/>
             </children>
         </VBox>
 
         <!-- Article 4-->
-        <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="article-container">
             <children>
-                <ImageView fitWidth="100.0" fitHeight="100.0">
+                <ImageView fitWidth="100.0" fitHeight="100.0" accessibleText="Image of a budget planner sheet">
                     <image>
                         <Image url="https://www.moneysavingexpert.com/content/dam/mse/images/hero/hero-BankingSaving-BudgetPlanner.jpg.rendition.992.992.jpg"/>
 
                     </image>
                 </ImageView>
-                <Label text="The Budget Planner"/>
+                <Label styleClass="article-heading" text="The Budget Planner"/>
+            </children>
+        </VBox>
+
+        <!-- Article 4-->
+        <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="article-container">
+            <children>
+                <ImageView fitWidth="100.0" fitHeight="100.0" accessibleText="Image of a budget planner sheet">
+                    <image>
+                        <Image url="https://www.moneysavingexpert.com/content/dam/mse/images/hero/hero-BankingSaving-BudgetPlanner.jpg.rendition.992.992.jpg"/>
+
+                    </image>
+                </ImageView>
+                <Label styleClass="article-heading" text="The Budget Planner"/>
+            </children>
+        </VBox>
+
+        <!-- Article 4-->
+        <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="article-container">
+            <children>
+                <ImageView fitWidth="100.0" fitHeight="100.0" accessibleText="Image of a budget planner sheet">
+                    <image>
+                        <Image url="https://www.moneysavingexpert.com/content/dam/mse/images/hero/hero-BankingSaving-BudgetPlanner.jpg.rendition.992.992.jpg"/>
+
+                    </image>
+                </ImageView>
+                <Label styleClass="article-heading" text="The Budget Planner"/>
             </children>
         </VBox>
 
