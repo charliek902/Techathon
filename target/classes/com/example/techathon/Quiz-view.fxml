@@ -41,8 +41,7 @@
             </children>
         </Pane>
     </center>
-<<<<<<< HEAD
-        <top>
+    <top>
         <Pane fx:id="header" BorderPane.alignment="CENTER">
             <children>
                 <HBox alignment="CENTER_LEFT" spacing="15.0">
@@ -59,7 +58,5 @@
                 </HBox>
             </children>
         </Pane>
-        </top>
-=======
->>>>>>> 97cb9e4c280e81e64792f169a5b60d36b3728f42
+    </top>
 </BorderPane>

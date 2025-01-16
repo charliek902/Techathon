@@ -22,22 +22,7 @@ public class CalculatorController {
         this.sceneManager = sceneManager;
     }
 
-    @FXML
-    protected void onHelloButtonClick() {
-        this.navController.onHomeButtonClick();
-    }
-    @FXML
-    protected void onLearnButtonClick() {
-        this.navController.onLearnButtonClick();
-    }
-    @FXML
-    protected void onQuizButtonClick() {
-        this.navController.onQuizButtonClick();
-    }
-    @FXML
-    protected void onCalculatorButtonClick() {
-        this.navController.onCalculatorButtonClick();
-    }
+
 
     @FXML
     private void handleISACalculate() {
