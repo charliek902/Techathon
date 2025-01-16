@@ -39,6 +39,16 @@
 
 }
 
+.choose-budgetCalculator-btn:hover{
+    -fx-background-color: #cbeef3;
+    -fx-border-color: black;
+}
+
+.choose-exampleCalculator-btn:hover{
+    -fx-background-color: #cbeef3;
+    -fx-border-color: black;
+}
+
 .choose-ISAcalculator-btn{
     -fx-background-color: transparent;
     -fx-border-color: black;
@@ -50,6 +60,15 @@
 }
 
 .choose-Mortgagecalculator-btn{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+}
+.choose-budgetCalculator-btn{
+    -fx-background-color: transparent;
+    -fx-border-color: black;
+}
+
+.choose-exampleCalculator-btn{
     -fx-background-color: transparent;
     -fx-border-color: black;
 }

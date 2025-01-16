@@ -3,10 +3,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
 import java.util.HashSet;
+import javafx.scene.control.ToggleGroup;
 
 import java.util.HashMap;
 
-// stores user information and states on each quiz
+// stores user information and states on each qusiz
 public class QuestionViewController {
     private String currentQuiz;
     private int user_page;
@@ -21,6 +22,8 @@ public class QuestionViewController {
     private HashMap<String, String[]> Questions_Options_Personality_Map;
     private HashMap<String, Integer> Questions_Personality_Correct_Answers_Map;
 
+    private ToggleGroup group;
+
     HashSet<String> seenQuestions;
 
     @FXML
@@ -33,6 +36,20 @@ public class QuestionViewController {
     private RadioButton answer3;
     @FXML
     private RadioButton answer4;
+    @FXML
+    public void initialize() {
+        // Initialize the ToggleGroup and add RadioButtons to it
+        this.group = new ToggleGroup();
+        answer1.setToggleGroup(group);
+        answer2.setToggleGroup(group);
+        answer3.setToggleGroup(group);
+        answer4.setToggleGroup(group);
+    }
+
+    // Method to clear selection of RadioButtons
+    public void clearSelectedRadioButtons() {
+        this.group.selectToggle(null); // Clears the selection
+    }
 
     public QuestionViewController(){
         this.Questions_Options_Finance_Map = new HashMap<>(10);
@@ -204,23 +221,25 @@ public class QuestionViewController {
     public void handleNext(){
 
         this.user_page += 1;
-        if(this.user_page > 10){
+        if(this.user_page >= 10){
             // route to answers --> populate answer template with results
 
         }
         else{
-
+            this.clearSelectedRadioButtons();
             String nextPage = this.getNextPage(this.currentPage, this.currentQuiz);
-
-
             this.populateTemplate(nextPage, this.currentQuiz);
         }
     }
 
     private void populateTemplate(String page, String quizType){
 
+        System.out.println("selected quiz type:");
+        System.out.println(quizType);
+
         switch (quizType) {
             case "personality":
+
                 String[] personalityOptions = this.Questions_Options_Personality_Map.get(page);
                 this.question.setText(page);
                 this.answer1.setText(personalityOptions[0]);
@@ -229,22 +248,19 @@ public class QuestionViewController {
                 this.answer4.setText(personalityOptions[3]);
 
             case "finance":
+                if(quizType.equals("finance")){
                 String[] financeOptions = this.Questions_Options_Finance_Map.get(page);
-
                 this.question.setText(page);
                 this.answer1.setText(financeOptions[0]);
                 this.answer2.setText(financeOptions[1]);
                 this.answer3.setText(financeOptions[2]);
                 this.answer4.setText(financeOptions[3]);
+                }
         }
     }
 
     public void setFirstPage(String QuizType) {
         Boolean foundFirstPage = false;
-
-        System.out.println("Quiz:");
-        System.out.println(QuizType);
-
 
         switch (QuizType) {
             case "personality":
@@ -253,12 +269,13 @@ public class QuestionViewController {
                     if(!foundFirstPage){
                         this.currentPage = key;
                         this.seenQuestions.add(key);
-                        this.populateTemplate(this.currentPage, this.currentQuiz);
+                        this.populateTemplate(this.currentPage, "personality");
                         foundFirstPage = true;
                     }
 
                 }
             case "finance":
+                System.out.println("goes here check 2!");
                 for (String key : Questions_Options_Finance_Map.keySet()) {
                     if(!foundFirstPage){
                         this.currentPage = key;

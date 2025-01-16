@@ -1,71 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.TilePane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<BorderPane stylesheets="app.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.techathon.chooseCalculatorController">
+<BorderPane stylesheets="app.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.techathon.chooseCalculatorController">
    <center>
       <BorderPane>
          <center>
-            <TilePane hgap="10.0" prefHeight="400.0" prefWidth="600.0" vgap="10.0">
+            <VBox BorderPane.alignment="CENTER">
                <children>
-                  <Pane prefHeight="200.0" prefWidth="200.0">
+                  <TilePane alignment="CENTER" hgap="10.0" prefHeight="400.0" prefWidth="600.0" vgap="10.0">
                      <children>
-                        <Button mnemonicParsing="false" onMouseClicked="#onISAButtonClick" prefHeight="200.0" prefWidth="200.0" styleClass="choose-ISAcalculator-btn" text="Savings ISA account">
-                           <font>
-                              <Font size="17.0" />
-                           </font></Button>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onMouseClicked="#onISAButtonClick" prefHeight="200.0" prefWidth="200.0" styleClass="choose-ISAcalculator-btn" text="Savings ISA account">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onMouseClicked="#onPensionsButtonClick" prefHeight="200.0" prefWidth="200.0" styleClass="choose-Pensioncalculator-btn" text="Pensions">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onMouseClicked="#onMortgageButtonClick" prefHeight="200.0" prefWidth="200.0" styleClass="choose-Mortgagecalculator-btn" text="Mortgage">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" onMouseClicked="#onBudgetButtonClick" prefHeight="200.0" prefWidth="200.0" text="Budgeting" styleClass="choose-budgetCalculator-btn">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane layoutX="10.0" layoutY="410.0" prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false"  prefHeight="200.0" prefWidth="200.0" text="Button" styleClass="choose-exampleCalculator-btn">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Button" styleClass="choose-exampleCalculator-btn">
+                                 <font>
+                                    <Font size="17.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </Pane>
                      </children>
-                  </Pane>
-                  <Pane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <Button mnemonicParsing="false" onMouseClicked="#onPensionsButtonClick" prefHeight="200.0" prefWidth="200.0" styleClass="choose-Pensioncalculator-btn" text="Pensions">
-                           <font>
-                              <Font size="17.0" />
-                           </font></Button>
-                     </children>
-                  </Pane>
-                  <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <Button mnemonicParsing="false" onMouseClicked="#onMortgageButtonClick" prefHeight="200.0" prefWidth="200.0" styleClass="choose-Mortgagecalculator-btn" text="Mortgage">
-                           <font>
-                              <Font size="17.0" />
-                           </font></Button>
-                     </children>
-                  </Pane>
-                  <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Button" />
-                     </children>
-                  </Pane>
-                  <Pane layoutX="10.0" layoutY="410.0" prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Button" />
-                     </children>
-                  </Pane>
-                  <Pane prefHeight="200.0" prefWidth="200.0">
-                     <children>
-                        <Button mnemonicParsing="false" prefHeight="200.0" prefWidth="200.0" text="Button" />
-                     </children>
-                  </Pane>
+                  </TilePane>
                </children>
-            </TilePane>
+            </VBox>
          </center>
          <top>
-            <Pane BorderPane.alignment="CENTER">
+            <HBox alignment="CENTER">
                <children>
-                  <Label prefHeight="28.0" prefWidth="600.0" styleClass="choose-calculator-heading" text="Choose one of our calculators to help you understand your money." textAlignment="RIGHT">
-                     <font>
-                        <Font size="19.0" />
-                     </font>
-                     <padding>
-                        <Insets bottom="20.0" left="15.0" top="20.0" />
-                     </padding>
-                  </Label>
+                  <Pane>
+                     <children>
+                        <Label styleClass="choose-calculator-heading" text="Choose one of our calculators to help you understand your money." textAlignment="RIGHT">
+                           <font>
+                              <Font size="19.0" />
+                           </font>
+                           <padding>
+                              <Insets bottom="20.0" left="15.0" top="20.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </Pane>
                </children>
-            </Pane>
+            </HBox>
          </top>
       </BorderPane>
    </center>
