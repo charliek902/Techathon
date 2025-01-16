@@ -64,7 +64,7 @@
                         <Font size="19.0" />
                      </font>
                   </Label>
-                  <Label fx:id="pensionOutputLabel" text="#" textFill="WHITE" />
+                  <Label fx:id="pensionOutputLabel" textFill="WHITE" />
                </children>
             </VBox>
          </children>
