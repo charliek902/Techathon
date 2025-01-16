@@ -58,6 +58,7 @@ public class HelloApplication extends Application {
 
         FXMLLoader fxmlLoader10 = new FXMLLoader(HelloApplication.class.getResource("Notes.fxml"));
         Scene notesScene = new Scene(fxmlLoader10.load(), 600, 600);
+        notesScene.getStylesheets().add(HelloApplication.class.getResource("/com/example/techathon/app.css").toExternalForm());
 
         sceneManager.addScene(welcomeScene, "welcome");
         sceneManager.addScene(calculatorScene, "calculator");
