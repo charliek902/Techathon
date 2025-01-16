@@ -43,10 +43,6 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader9 = new FXMLLoader(HelloApplication.class.getResource("Question.fxml"));
         Scene questionsScene = new Scene(fxmlLoader9.load(), 600, 600);
 
-
-
-
-
         sceneManager.addScene(welcomeScene, "welcome");
         sceneManager.addScene(calculatorScene, "calculator");
         sceneManager.addScene(learnScene, "learn");
@@ -56,7 +52,6 @@ public class HelloApplication extends Application {
         sceneManager.addScene(mortgage_Calc, "mortgage-calculator");
         sceneManager.addScene(answersScene, "answers");
         sceneManager.addScene(questionsScene, "question");
-
 
         sceneManager.setScene(welcomeScene);
 
@@ -81,9 +76,6 @@ public class HelloApplication extends Application {
         isaController.setSceneManager(sceneManager);
         pensionController.setSceneManager(sceneManager);
         mortgageController.setSceneManager(sceneManager);
-
-
-
 
         NavController navController = new NavController(sceneManager);
 
