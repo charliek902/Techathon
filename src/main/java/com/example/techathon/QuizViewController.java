@@ -57,14 +57,12 @@ public class QuizViewController {
         Parent root = loader.load();
         QuestionViewController questionTemplate = loader.getController();
 
-
         questionTemplate.setSceneManager(this.sceneManager);
         questionTemplate.setQuiz("personality");
         questionTemplate.setFirstPage("personality");
 
-
         Scene question = new Scene(root);
-        this.sceneManager.applyStage(question, "Finance quiz");
+        this.sceneManager.applyStage(question, "Personality Quiz");
     }
 
 

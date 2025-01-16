@@ -2,6 +2,7 @@ package com.example.techathon;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+import java.util.HashSet;
 
 import java.util.HashMap;
 
@@ -20,6 +21,8 @@ public class QuestionViewController {
     private HashMap<String, String[]> Questions_Options_Personality_Map;
     private HashMap<String, Integer> Questions_Personality_Correct_Answers_Map;
 
+    HashSet<String> seenQuestions;
+
     @FXML
     private Label question;
     @FXML
@@ -37,6 +40,7 @@ public class QuestionViewController {
         this.Questions_Options_Personality_Map = new HashMap<>(10);
         this.Questions_Finance_Correct_Answers_Map = new HashMap<>(10);
         this.populateHashMaps();
+        seenQuestions = new HashSet<>();
     }
 
     public void setSceneManager(SceneManager sceneManager) {
@@ -198,24 +202,22 @@ public class QuestionViewController {
 
 
     public void handleNext(){
+
         this.user_page += 1;
         if(this.user_page > 10){
             // route to answers --> populate answer template with results
 
         }
         else{
+
             String nextPage = this.getNextPage(this.currentPage, this.currentQuiz);
+
+
             this.populateTemplate(nextPage, this.currentQuiz);
         }
     }
 
     private void populateTemplate(String page, String quizType){
-
-        System.out.println("---------");
-        System.out.println(quizType);
-        System.out.println(page);
-        System.out.println("---------");
-
 
         switch (quizType) {
             case "personality":
@@ -234,51 +236,62 @@ public class QuestionViewController {
                 this.answer2.setText(financeOptions[1]);
                 this.answer3.setText(financeOptions[2]);
                 this.answer4.setText(financeOptions[3]);
-
         }
     }
 
     public void setFirstPage(String QuizType) {
+        Boolean foundFirstPage = false;
+
+        System.out.println("Quiz:");
+        System.out.println(QuizType);
+
+
         switch (QuizType) {
             case "personality":
+                System.out.println("goes here check!");
                 for (String key : Questions_Options_Personality_Map.keySet()) {
-                    this.currentPage = key;
-                    this.populateTemplate(this.currentPage, this.currentQuiz);
+                    if(!foundFirstPage){
+                        this.currentPage = key;
+                        this.seenQuestions.add(key);
+                        this.populateTemplate(this.currentPage, this.currentQuiz);
+                        foundFirstPage = true;
+                    }
 
                 }
             case "finance":
                 for (String key : Questions_Options_Finance_Map.keySet()) {
-                    this.currentPage = key;
-                    this.populateTemplate(this.currentPage, this.currentQuiz);
-
+                    if(!foundFirstPage){
+                        this.currentPage = key;
+                        this.seenQuestions.add(key);
+                        this.populateTemplate(this.currentPage, this.currentQuiz);
+                        foundFirstPage = true;
+                    }
                 }
         }
     }
 
     public String getNextPage(String currentPage, String QuizType){
-        Boolean foundCurrentPage = false;
-        Boolean foundNextPage = false;
         String nextPage = "";
+        System.out.println(this.seenQuestions);
         switch(QuizType){
             case "personality":
                 for (String key : Questions_Options_Personality_Map.keySet()) {
-                    if(foundCurrentPage && !foundNextPage){
-                        foundNextPage = true;
-                        nextPage = key;
-                    }
-                    else if(key == currentPage){
-                        foundCurrentPage = true;
+                    if(!(this.seenQuestions.contains(key))){
+                        this.seenQuestions.add(key);
+                        return key;
                     }
                 }
                 return nextPage;
             case "finance":
+
                 for (String key : Questions_Options_Finance_Map.keySet()) {
-                    if(foundCurrentPage && !foundNextPage){
-                        foundNextPage = true;
-                        nextPage = key;
-                    }
-                    else if(key == currentPage){
-                        foundCurrentPage = true;
+                    System.out.println(this.seenQuestions);
+
+
+                    if(!(this.seenQuestions.contains(key))){
+                        System.out.println("goes in here!");
+                        this.seenQuestions.add(key);
+                        return key;
                     }
                 }
                 return nextPage;
