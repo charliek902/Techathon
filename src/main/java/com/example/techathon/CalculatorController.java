@@ -73,6 +73,21 @@ public class CalculatorController {
     private Label totalCostLabel;
     @FXML
     private Label budgetResultLabel;
+    //>Pension view components
+    @FXML
+    private TextField pensionAmountField;
+    @FXML
+    private TextField ageRetirementField;
+    @FXML
+    private TextField dayField;
+    @FXML
+    private TextField monthField;
+    @FXML
+    private TextField yearField;
+    @FXML
+    private TextField salaryForPensionField;
+    @FXML
+    private Label pensionOutputLabel;
 
 
 
@@ -123,15 +138,38 @@ public class CalculatorController {
 
     @FXML
     private void handlePensionCalculate() {
-        double amount = Double.parseDouble(amountField.getText());
-        short time = Short.parseShort(timeField.getText());
+        try {
+            //DOB
+            int day = Integer.parseInt(dayField.getText());
+            int month = Integer.parseInt(monthField.getText());
+            int year = Integer.parseInt(yearField.getText());
+
+            double salary = parseDoubleNullIsZero(salaryForPensionField.getText());
+
+            double monthlyContribution = parseDoubleNullIsZero(pensionAmountField.getText());
+
+            int retirementAge = Integer.parseInt(ageRetirementField.getText());
+
+            // Calculate the number of years until retirement
+            int currentYear = java.time.Year.now().getValue();
+            int age = currentYear - year;
+            int yearsUntilRetirement = retirementAge - age;
+
+            // Assuming interest calculation for the pension pot
+            double annualContribution = monthlyContribution * 12;
+            double estimatedPensionPot = annualContribution * yearsUntilRetirement;
+
+            pensionOutputLabel.setText("£" + estimatedPensionPot);
+
+        } catch (NumberFormatException e) {
+            System.out.println(e);
+        }
     }
 
     @FXML
     private void handleMortgageCalculate() {
         double amount = Double.parseDouble(amountField.getText());
         short time = Short.parseShort(timeField.getText());
-        double result = time*amount;
     }
 
     @FXML
