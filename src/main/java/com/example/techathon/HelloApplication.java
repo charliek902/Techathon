@@ -46,6 +46,9 @@ public class HelloApplication extends Application {
         FXMLLoader fxmlLoader9 = new FXMLLoader(HelloApplication.class.getResource("Question.fxml"));
         Scene questionsScene = new Scene(fxmlLoader9.load(), 600, 600);
 
+        FXMLLoader fxmlLoader10 = new FXMLLoader(HelloApplication.class.getResource("Notes.fxml"));
+        Scene notesScene = new Scene(fxmlLoader10.load(), 600, 600);
+
         sceneManager.addScene(welcomeScene, "welcome");
         sceneManager.addScene(calculatorScene, "calculator");
         sceneManager.addScene(learnScene, "learn");
@@ -56,6 +59,7 @@ public class HelloApplication extends Application {
         sceneManager.addScene(answersScene, "answers");
         sceneManager.addScene(questionsScene, "question");
         sceneManager.addScene(budgetCalc, "budget-calculator");
+        sceneManager.addScene(notesScene, "notes");
 
         sceneManager.setScene(welcomeScene);
 
@@ -74,6 +78,8 @@ public class HelloApplication extends Application {
         AnswerViewController answerViewController = fxmlLoader8.getController();
         QuestionViewController question = fxmlLoader9.getController();
 
+
+
         // add scene manager to controllers
         welcomeController.setSceneManager(sceneManager);
         chooseCalculatorController.setSceneManager(sceneManager);
@@ -84,8 +90,8 @@ public class HelloApplication extends Application {
         mortgageCalcController.setSceneManager(sceneManager);
         budgetCalcController.setSceneManager(sceneManager);
 
+        // sets nav controller in each of the controllers
         NavController navController = new NavController(sceneManager);
-
         welcomeController.setNavContoller(navController);
         chooseCalculatorController.setNavContoller(navController);
         learnViewController.setNavContoller(navController);
@@ -98,10 +104,26 @@ public class HelloApplication extends Application {
         budgetCalcController.setNavContoller(navController);
 
 
+        /*
+
+         Scene calculatorScene = this.sceneManager.getScene("Notes");
+        this.sceneManager.applyStage(calculatorScene, "Notes");
+
+
+
+         */
+
+
         sceneManager.applyStage(welcomeScene, "Welcome!");
     }
 
     public static void main(String[] args) {
         launch();
     }
+
+
+
+
+
+
 }

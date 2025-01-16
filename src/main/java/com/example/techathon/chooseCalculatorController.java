@@ -34,6 +34,10 @@ public class chooseCalculatorController {
     protected void onCalculatorButtonClick() {
         this.navController.onCalculatorButtonClick();
     }
+    @FXML
+    protected void onNotesButtonClick() {
+        this.navController.onNotesButtonClick();
+    }
 
     @FXML
     protected void onISAButtonClick() {

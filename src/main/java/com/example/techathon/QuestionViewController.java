@@ -318,7 +318,6 @@ public class QuestionViewController {
 
     }
 
-
     @FXML
     protected void onHelloButtonClick() {
         this.navController.onHomeButtonClick();
@@ -334,6 +333,10 @@ public class QuestionViewController {
     @FXML
     protected void onCalculatorButtonClick() {
         this.navController.onCalculatorButtonClick();
+    }
+    @FXML
+    protected void onNotesButtonClick() {
+        this.navController.onNotesButtonClick();
     }
 
 

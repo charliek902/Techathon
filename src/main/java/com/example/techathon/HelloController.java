@@ -5,18 +5,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 
 
-/*
-
-        sceneManager.addScene(welcomeScene, "welcome");
-        sceneManager.addScene(calculatorScene, "calculator");
-        sceneManager.addScene(learnScene, "learn");
-        sceneManager.addScene(quizScene, "quiz");
-
- */
-
-
-
-
 public class HelloController {
     private SceneManager sceneManager;
     private NavController navController;
@@ -47,5 +35,8 @@ public class HelloController {
     protected void onCalculatorButtonClick() {
         this.navController.onCalculatorButtonClick();
     }
-
+    @FXML
+    protected void onNotesButtonClick() {
+        this.navController.onNotesButtonClick();
+    }
 }

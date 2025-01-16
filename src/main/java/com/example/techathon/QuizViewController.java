@@ -34,6 +34,10 @@ public class QuizViewController {
         this.navController.onCalculatorButtonClick();
     }
     @FXML
+    protected void onNotesButtonClick() {
+        this.navController.onNotesButtonClick();
+    }
+    @FXML
     protected void onFinanceQuiz() throws IOException {
 
         FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("Question.fxml"));

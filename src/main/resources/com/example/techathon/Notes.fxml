@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
 
-<BorderPane stylesheets="app.css" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.techathon.HelloController">
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.text.Font?>
+<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.techathon.NotesViewController">
     <center>
-        <Pane fx:id="body" styleClass="body-style">
+        <Pane fx:id="body" style="-fx-background-color: rgb(140,193,193);">
             <children>
                 <VBox alignment="CENTER" fillWidth="false">
                     <children>
-                        <Label styleClass="home-heading" text="World of Finance">
+                        <Label styleClass="home-heading" text="Notes Page">
                             <font>
                                 <Font name="Bodoni MT" size="34.0" />
                             </font>
@@ -42,12 +45,4 @@
             </children>
         </Pane>
     </top>
-    <bottom>
-        <Pane fx:id="footer" style="-fx-background-color: #6e8d63;" BorderPane.alignment="CENTER">
-            <children>
-                <Label layoutX="20.0" layoutY="10.0" text="Copyright @ WOF 2025" textFill="WHITE" wrapText="true" />
-                <Label layoutX="198.0" layoutY="10.0" text="WOF is a trademark under the FinanceED company." textFill="WHITE" wrapText="true" />
-            </children>
-        </Pane>
-    </bottom>
 </BorderPane>

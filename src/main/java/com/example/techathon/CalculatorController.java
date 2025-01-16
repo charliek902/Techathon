@@ -41,5 +41,25 @@ public class CalculatorController {
         short time = Short.parseShort(timeField.getText());
         double result = time*amount;
     }
+    @FXML
+    protected void onHelloButtonClick() {
+        this.navController.onHomeButtonClick();
+    }
+    @FXML
+    protected void onLearnButtonClick() {
+        this.navController.onLearnButtonClick();
+    }
+    @FXML
+    protected void onQuizButtonClick() {
+        this.navController.onQuizButtonClick();
+    }
+    @FXML
+    protected void onCalculatorButtonClick() {
+        this.navController.onCalculatorButtonClick();
+    }
+    @FXML
+    protected void onNotesButtonClick() {
+        this.navController.onNotesButtonClick();
+    }
 }
 

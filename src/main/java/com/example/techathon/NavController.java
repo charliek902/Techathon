@@ -30,8 +30,8 @@ public class NavController {
         this.sceneManager.applyStage(calculatorScene, "CalculatorController");
     }
 
-
-
-
-
+    protected void onNotesButtonClick() {
+        Scene notes = this.sceneManager.getScene("notes");
+        this.sceneManager.applyStage(notes, "Notes");
+    }
 }
