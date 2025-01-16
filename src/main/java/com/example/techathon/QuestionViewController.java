@@ -3,6 +3,8 @@ import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.RadioButton;
+
+import java.io.IOException;
 import java.util.HashSet;
 import javafx.scene.control.ToggleGroup;
 
@@ -335,7 +337,7 @@ public class QuestionViewController {
         this.navController.onCalculatorButtonClick();
     }
     @FXML
-    protected void onNotesButtonClick() {
+    protected void onNotesButtonClick() throws IOException {
         this.navController.onNotesButtonClick();
     }
 

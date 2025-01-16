@@ -4,6 +4,8 @@ import javafx.fxml.FXML;
 import javafx.scene.Scene;
 import javafx.scene.control.Label;
 
+import java.io.IOException;
+
 
 public class HelloController {
     private SceneManager sceneManager;
@@ -36,7 +38,7 @@ public class HelloController {
         this.navController.onCalculatorButtonClick();
     }
     @FXML
-    protected void onNotesButtonClick() {
+    protected void onNotesButtonClick() throws IOException {
         this.navController.onNotesButtonClick();
     }
 }

@@ -8,6 +8,8 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import org.kordamp.bootstrapfx.scene.layout.Panel;
 
+import java.io.IOException;
+
 public class chooseCalculatorController {
     private SceneManager sceneManager;
     private NavController navController;
@@ -35,7 +37,7 @@ public class chooseCalculatorController {
         this.navController.onCalculatorButtonClick();
     }
     @FXML
-    protected void onNotesButtonClick() {
+    protected void onNotesButtonClick() throws IOException {
         this.navController.onNotesButtonClick();
     }
 

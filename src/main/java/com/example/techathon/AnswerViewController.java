@@ -2,6 +2,8 @@ package com.example.techathon;
 
 import javafx.fxml.FXML;
 
+import java.io.IOException;
+
 public class AnswerViewController {
     private NavController navController;
     private SceneManager sceneManager;
@@ -39,7 +41,7 @@ public class AnswerViewController {
         this.navController.onCalculatorButtonClick();
     }
     @FXML
-    protected void onNotesButtonClick() {
+    protected void onNotesButtonClick() throws IOException {
         this.navController.onNotesButtonClick();
     }
 }

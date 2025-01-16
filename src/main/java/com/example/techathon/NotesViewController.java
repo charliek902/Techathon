@@ -2,10 +2,8 @@ package com.example.techathon;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextArea;
-
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
+import java.nio.file.Paths;
 
 public class NotesViewController {
 
@@ -34,19 +32,21 @@ public class NotesViewController {
         this.navController.onCalculatorButtonClick();
     }
     @FXML
-    protected void onNotesButtonClick() {
+    protected void onNotesButtonClick() throws IOException {
         this.navController.onNotesButtonClick();
     }
     @FXML
-    protected void saveNotes() {
-        // save to notes.txt
-
-
+    protected void saveNotes() throws IOException {
+        writeToFile(this.notes.getText());
     }
 
     protected void loadNotes() {
         StringBuilder textFile = new StringBuilder();
-        try (BufferedReader reader = new BufferedReader(new FileReader("../../../resources/com/example/techathon/notes.txt"))) {
+        String currentWorkingDir = System.getProperty("user.dir");
+        String directoryPath = "/src/main/resources/com/example/techathon/notes.txt";
+        String fullPath = currentWorkingDir + directoryPath;
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(fullPath))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 textFile.append(line).append("\n");
@@ -54,12 +54,21 @@ public class NotesViewController {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        System.out.println("test:");
-        System.out.println(textFile.toString());
-
-
         this.notes.setText(textFile.toString());
+    }
+
+    public void writeToFile( String textLine ) throws IOException {
+        String currentWorkingDir = System.getProperty("user.dir");
+        String directoryPath = "/src/main/resources/com/example/techathon/notes.txt";
+        String fullPath = currentWorkingDir + directoryPath;
+
+        File file = new File(fullPath);
+        if (!file.exists()) {
+            file.createNewFile();
+        }
+        BufferedWriter writer = new BufferedWriter(new FileWriter(file));
+        writer.write(textLine);
+        writer.close();
     }
 
 

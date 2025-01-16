@@ -3,6 +3,8 @@ package com.example.techathon;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 
+import java.io.IOException;
+
 public class CalculatorController {
     @FXML
     private TextField amountField;
@@ -60,7 +62,7 @@ public class CalculatorController {
         this.navController.onCalculatorButtonClick();
     }
     @FXML
-    protected void onNotesButtonClick() {
+    protected void onNotesButtonClick() throws IOException {
         this.navController.onNotesButtonClick();
     }
 }
