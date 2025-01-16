@@ -1,7 +1,11 @@
 package com.example.techathon;
 
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
+
+import java.io.IOException;
 
 public class QuizViewController {
     private SceneManager sceneManager;
@@ -30,24 +34,36 @@ public class QuizViewController {
         this.navController.onCalculatorButtonClick();
     }
     @FXML
-    protected void onFinanceQuiz() {
-        // finance quiz
-        QuestionViewController questionTemplate = new QuestionViewController();
+    protected void onFinanceQuiz() throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("Question.fxml"));
+        Parent root = loader.load();
+        QuestionViewController questionTemplate = loader.getController();
+
+
         questionTemplate.setSceneManager(this.sceneManager);
         questionTemplate.setQuiz("finance");
-        String page = questionTemplate.getFirstPage("finance");
-        Scene question = this.sceneManager.getScene("question");
+        questionTemplate.setFirstPage("finance");
+
+
+        Scene question = new Scene(root);
         this.sceneManager.applyStage(question, "Finance quiz");
 
     }
     @FXML
-    protected void onPersonalityQuiz() {
-        // personality quiz
-        QuestionViewController questionTemplate = new QuestionViewController();
+    protected void onPersonalityQuiz() throws IOException {
+
+        FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("Question.fxml"));
+        Parent root = loader.load();
+        QuestionViewController questionTemplate = loader.getController();
+
+
         questionTemplate.setSceneManager(this.sceneManager);
         questionTemplate.setQuiz("personality");
-        String page = questionTemplate.getFirstPage("personality");
-        Scene question = this.sceneManager.getScene("question");
+        questionTemplate.setFirstPage("personality");
+
+
+        Scene question = new Scene(root);
         this.sceneManager.applyStage(question, "Finance quiz");
     }
 

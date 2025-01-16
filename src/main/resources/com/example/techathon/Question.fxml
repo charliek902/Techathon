@@ -14,6 +14,15 @@
             <children>
                 <VBox alignment="CENTER" fillWidth="false">
                     <children>
+                        <Label fx:id="question" text="Question 1 placeholder" style="-fx-font-size: 16px; -fx-text-fill: black;" />
+
+
+                        <RadioButton fx:id="answer1" text="Answer 1 placeholder" style="-fx-font-size: 16px; -fx-text-fill: black;" />
+                        <RadioButton fx:id="answer2" text="Answer 2 placeholder" style="-fx-font-size: 16px; -fx-text-fill: black;" />
+                        <RadioButton fx:id="answer3" text="Answer 3 placeholder" style="-fx-font-size: 16px; -fx-text-fill: black;" />
+                        <RadioButton fx:id="answer4" text="Answer 4 placeholder" style="-fx-font-size: 16px; -fx-text-fill: black;" />
+
+                        <Button fx:id="nextPageButton" text="Next Page" style="-fx-font-size: 14px; -fx-background-color: lightblue;" onAction="#handleNext" />
 
                     </children>
                     <padding>

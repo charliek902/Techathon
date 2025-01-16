@@ -1,5 +1,7 @@
 package com.example.techathon;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.RadioButton;
 
 import java.util.HashMap;
 
@@ -18,6 +20,16 @@ public class QuestionViewController {
     private HashMap<String, String[]> Questions_Options_Personality_Map;
     private HashMap<String, Integer> Questions_Personality_Correct_Answers_Map;
 
+    @FXML
+    private Label question;
+    @FXML
+    private RadioButton answer1;
+    @FXML
+    private RadioButton answer2;
+    @FXML
+    private RadioButton answer3;
+    @FXML
+    private RadioButton answer4;
 
     public QuestionViewController(){
         this.Questions_Options_Finance_Map = new HashMap<>(10);
@@ -37,14 +49,9 @@ public class QuestionViewController {
         this.correct = 0;
     }
 
-
-
-
     public void setNavContoller(NavController navController){
         this.navController = navController;
     }
-
-
 
 
     private void populateHashMaps(){
@@ -203,31 +210,48 @@ public class QuestionViewController {
     }
 
     private void populateTemplate(String page, String quizType){
+
+        System.out.println("---------");
+        System.out.println(quizType);
+        System.out.println(page);
+        System.out.println("---------");
+
+
         switch (quizType) {
             case "personality":
                 String[] personalityOptions = this.Questions_Options_Personality_Map.get(page);
-
+                this.question.setText(page);
+                this.answer1.setText(personalityOptions[0]);
+                this.answer2.setText(personalityOptions[1]);
+                this.answer3.setText(personalityOptions[2]);
+                this.answer4.setText(personalityOptions[3]);
 
             case "finance":
                 String[] financeOptions = this.Questions_Options_Finance_Map.get(page);
 
+                this.question.setText(page);
+                this.answer1.setText(financeOptions[0]);
+                this.answer2.setText(financeOptions[1]);
+                this.answer3.setText(financeOptions[2]);
+                this.answer4.setText(financeOptions[3]);
+
         }
     }
 
-    public String getFirstPage(String QuizType) {
+    public void setFirstPage(String QuizType) {
         switch (QuizType) {
             case "personality":
                 for (String key : Questions_Options_Personality_Map.keySet()) {
                     this.currentPage = key;
-                    return key;
+                    this.populateTemplate(this.currentPage, this.currentQuiz);
+
                 }
             case "finance":
-                for (String key : Questions_Options_Personality_Map.keySet()) {
+                for (String key : Questions_Options_Finance_Map.keySet()) {
                     this.currentPage = key;
-                    return key;
+                    this.populateTemplate(this.currentPage, this.currentQuiz);
+
                 }
-            default:
-                return "";
         }
     }
 
@@ -285,5 +309,6 @@ public class QuestionViewController {
     protected void onCalculatorButtonClick() {
         this.navController.onCalculatorButtonClick();
     }
+
 
 }
