@@ -93,31 +93,7 @@
             </children>
         </VBox>
 
-        <!-- Article 4-->
-        <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="article-container">
-            <children>
-                <ImageView fitWidth="100.0" fitHeight="100.0" accessibleText="Image of a budget planner sheet">
-                    <image>
-                        <Image url="https://www.moneysavingexpert.com/content/dam/mse/images/hero/hero-BankingSaving-BudgetPlanner.jpg.rendition.992.992.jpg"/>
 
-                    </image>
-                </ImageView>
-                <Label styleClass="article-heading" text="The Budget Planner"/>
-            </children>
-        </VBox>
-
-        <!-- Article 4-->
-        <VBox alignment="CENTER" GridPane.columnIndex="1" GridPane.rowIndex="1" styleClass="article-container">
-            <children>
-                <ImageView fitWidth="100.0" fitHeight="100.0" accessibleText="Image of a budget planner sheet">
-                    <image>
-                        <Image url="https://www.moneysavingexpert.com/content/dam/mse/images/hero/hero-BankingSaving-BudgetPlanner.jpg.rendition.992.992.jpg"/>
-
-                    </image>
-                </ImageView>
-                <Label styleClass="article-heading" text="The Budget Planner"/>
-            </children>
-        </VBox>
 
     </GridPane>
 </AnchorPane>

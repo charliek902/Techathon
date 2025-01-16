@@ -93,9 +93,6 @@ public class CalculatorController {
     public void initialize() {
         // Grouping the radio buttons
         radioGroup = new ToggleGroup();
-//        growthISACheckBoxOption1.setToggleGroup(radioGroup);
-//        growthISACheckBoxOption2.setToggleGroup(radioGroup);
-//        growthISACheckBoxOption3.setToggleGroup(radioGroup);
     }
     public void setNavContoller(NavController navController) {
         this.navController = navController;
@@ -109,21 +106,19 @@ public class CalculatorController {
 
     @FXML
     private void handleISACalculate() {
-        double amount = Double.parseDouble(amountField.getText());
-        short time = Short.parseShort(timeField.getText());
-
-        // Determine the ISAInterest based on the selected radio button
-        RadioButton selectedRadioButton = (RadioButton) radioGroup.getSelectedToggle();
-        if (selectedRadioButton == growthISACheckBoxOption1) {
-            ISAInterest = 2;
-        } else if (selectedRadioButton == growthISACheckBoxOption2) {
-            ISAInterest = 5;
-        } else if (selectedRadioButton == growthISACheckBoxOption3) {
-            ISAInterest = 8;
+        double amount = Double.parseDouble(this.amountField.getText());
+        short time = Short.parseShort(this.timeField.getText());
+        RadioButton selectedRadioButton = (RadioButton)this.radioGroup.getSelectedToggle();
+        if (selectedRadioButton == this.growthISACheckBoxOption1) {
+            this.ISAInterest = (double)2.0F;
+        } else if (selectedRadioButton == this.growthISACheckBoxOption2) {
+            this.ISAInterest = (double)5.0F;
+        } else if (selectedRadioButton == this.growthISACheckBoxOption3) {
+            this.ISAInterest = (double)8.0F;
         }
 
-        double result = amount * ((ISAInterest / 100) + 1) * time;
-        ISAOutputLabel.setText("£" + result);
+        double result = amount * (this.ISAInterest / (double)100.0F + (double)1.0F) * (double)time;
+        this.ISAOutputLabel.setText("£" + result);
     }
 
     @FXML
