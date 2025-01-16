@@ -36,6 +36,8 @@ public class HelloApplication extends Application {
         Scene pension_Calc = new Scene(fxmlLoader6.load(), 600, 600);
         FXMLLoader fxmlLoader7 = new FXMLLoader(HelloApplication.class.getResource("mortgage-calculator.fxml"));
         Scene mortgage_Calc = new Scene(fxmlLoader7.load(), 600, 600);
+        FXMLLoader loaderForBudgetCalc = new FXMLLoader(HelloApplication.class.getResource("budgeting-calculator.fxml"));
+        Scene budgetCalc = new Scene(loaderForBudgetCalc.load(), 600, 600);
 
         FXMLLoader fxmlLoader8 = new FXMLLoader(HelloApplication.class.getResource("Answers-view.fxml"));
         Scene answersScene = new Scene(fxmlLoader8.load(), 600, 600);
@@ -52,6 +54,7 @@ public class HelloApplication extends Application {
         sceneManager.addScene(mortgage_Calc, "mortgage-calculator");
         sceneManager.addScene(answersScene, "answers");
         sceneManager.addScene(questionsScene, "question");
+        sceneManager.addScene(budgetCalc, "budget-calculator");
 
         sceneManager.setScene(welcomeScene);
 
@@ -62,8 +65,10 @@ public class HelloApplication extends Application {
         QuizViewController quizViewController = fxmlLoader4.getController();
 
         CalculatorController isaController = fxmlLoader5.getController();
-        CalculatorController pensionController = fxmlLoader6.getController();
-        CalculatorController mortgageController = fxmlLoader7.getController();
+        CalculatorController pensionCalcController = fxmlLoader6.getController();
+        CalculatorController mortgageCalcController = fxmlLoader7.getController();
+        CalculatorController budgetCalcController = loaderForBudgetCalc.getController();
+
 
         AnswerViewController answerViewController = fxmlLoader8.getController();
         QuestionViewController question = fxmlLoader9.getController();
@@ -74,8 +79,9 @@ public class HelloApplication extends Application {
         learnViewController.setSceneManager(sceneManager);
         quizViewController.setSceneManager(sceneManager);
         isaController.setSceneManager(sceneManager);
-        pensionController.setSceneManager(sceneManager);
-        mortgageController.setSceneManager(sceneManager);
+        pensionCalcController.setSceneManager(sceneManager);
+        mortgageCalcController.setSceneManager(sceneManager);
+        budgetCalcController.setSceneManager(sceneManager);
 
         NavController navController = new NavController(sceneManager);
 
@@ -83,12 +89,12 @@ public class HelloApplication extends Application {
         chooseCalculatorController.setNavContoller(navController);
         learnViewController.setNavContoller(navController);
         quizViewController.setNavContoller(navController);
-
         isaController.setNavContoller(navController);
-        pensionController.setNavContoller(navController);
-        mortgageController.setNavContoller(navController);
+        pensionCalcController.setNavContoller(navController);
+        mortgageCalcController.setNavContoller(navController);
         answerViewController.setNavContoller(navController);
         question.setNavContoller(navController);
+        budgetCalcController.setNavContoller(navController);
 
 
         sceneManager.applyStage(welcomeScene, "Welcome!");

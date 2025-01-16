@@ -10,7 +10,7 @@
 
 <VBox alignment="CENTER" stylesheets="@app.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.techathon.CalculatorController">
    <children>
-      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Basic Mortgage Claculator">
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Basic Mortgage Calculator">
          <font>
             <Font size="20.0" />
          </font>

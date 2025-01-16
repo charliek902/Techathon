@@ -50,5 +50,10 @@ public class chooseCalculatorController {
 
     }
 
+    @FXML
+    protected void onBudgetButtonClick(){
+        sceneManager.applyStage(sceneManager.getScene("budget-calculator"),"Budgeting");
+    }
+
 
 }
