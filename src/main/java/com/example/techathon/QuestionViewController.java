@@ -8,6 +8,7 @@ public class QuestionViewController {
     private int correct;
     private String currentPage;
     private SceneManager sceneManager;
+    private NavController navController;
 
     private HashMap<String, String[]> Questions_Options_Finance_Map;
     private HashMap<String, Integer> Questions_Finance_Correct_Answers_Map;
@@ -16,17 +17,32 @@ public class QuestionViewController {
     private HashMap<String, Integer> Questions_Personality_Correct_Answers_Map;
 
 
-    public QuestionViewController(String currentQuiz, SceneManager sceneManager){
-        this.currentQuiz = currentQuiz;
-        this.user_page = 1;
-        this.correct = 0;
-        this.sceneManager = sceneManager;
+    public QuestionViewController(){
         this.Questions_Options_Finance_Map = new HashMap<>(10);
         this.Questions_Finance_Correct_Answers_Map = new HashMap<>(10);
         this.Questions_Options_Personality_Map = new HashMap<>(10);
         this.Questions_Finance_Correct_Answers_Map = new HashMap<>(10);
         this.populateHashMaps();
     }
+
+    public void setSceneManager(SceneManager sceneManager) {
+        this.sceneManager = sceneManager;
+    }
+
+    public void setQuiz(String currentQuiz){
+        this.currentQuiz = currentQuiz;
+        this.user_page = 1;
+        this.correct = 0;
+    }
+
+
+
+
+    public void setNavContoller(NavController navController){
+        this.navController = navController;
+    }
+
+
 
 
     private void populateHashMaps(){
@@ -177,8 +193,6 @@ public class QuestionViewController {
         if(this.user_page > 10){
             // route to answers --> populate answer template with results
 
-
-
         }
         else{
             String nextPage = this.getNextPage(this.currentPage, this.currentQuiz);
@@ -197,8 +211,6 @@ public class QuestionViewController {
 
         }
     }
-
-
 
     public String getFirstPage(String QuizType) {
         switch (QuizType) {
